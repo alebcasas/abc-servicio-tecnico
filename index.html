@@ -1,86 +1,239 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>ABC Servicio Técnico de PC y Redes</title>
 
 <style>
-
-/* BASE */
-
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#F1FAEE;
-    color:#222;
-    line-height:1.6;
+/* Reset y estilos base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #F1FAEE;
+  color: #333;
+  line-height: 1.6;
 }
 
-a{ text-decoration:none; color:inherit; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 /* HEADER */
-
-header{
-    background:#1D3557;
-    color:white;
-    padding:20px;
-    text-align:center;
+header {
+  background: #1D3557;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-.logo{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-    font-weight:bold;
-    font-size:1.8em;
+header .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-.logo svg{ width:30px; height:30px; fill:#E63946; }
+header .logo svg {
+  width: 30px;
+  height: 30px;
+  fill: #E63946;
+}
 
 /* NAV */
-
-nav{
-    background:#457B9D;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    padding:10px;
-    gap:15px;
+nav {
+  background: #457B9D;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 12px;
 }
 
-nav a{ color:white; font-weight:bold; }
+nav a {
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+}
 
 /* CONTENT */
-
-.container{
-    max-width:950px;
-    margin:20px auto;
-    padding:0 15px;
+.container {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
 }
 
-h2{ text-align:center; color:#1D3557; }
-
-.service-box{
-    background:white;
-    padding:18px;
-    margin:15px 0;
-    border-radius:6px;
-    box-shadow:0 2px 4px rgba(0,0,0,.1);
+h2 {
+  text-align: center;
+  font-size: 1.8em;
+  color: #1D3557;
 }
 
-.service-box h3{ color:#1D3557; font-weight:bold; }
-
-/* BOTONES */
-
-.btn{
-    display:inline-block;
-    padding:12px 22px;
-    background:#E63946;
-    color:white;
-    border-radius:6px;
-    font-weight:bold;
+.service-box {
+  background: white;
+  margin: 15px 0;
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 
-.btn:hover{ background:#d62f
+.service-box h3 {
+  margin-top: 0;
+  color: #1D3557;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+/* CONTACTO */
+.contact {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  font-size: 1.1em;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 12px;
+  font-size: 1.1em;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+}
+
+/* FOOTER */
+footer {
+  background: #1D3557;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+  font-size: .9em;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+
+  header .logo {
+    flex-direction: column;
+    font-size: 1.4em;
+  }
+
+  nav a {
+    font-size: .95em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .btn-whatsapp {
+    width: 100%;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+
+    <svg viewBox="0 0 24 24">
+      <path d="M22.7,17.3l-6-6c0.5-1,0.8-2.2,0.8-3.4c0-4.4-3.6-8-8-8S1.5,3.9,1.5,8.3s3.6,8,8,8c1.2,0,2.4-0.3,3.4-0.8l6,6c0.4,0.4,1,0.4,1.4,0S23.1,17.7,22.7,17.3z M9.5,13.5c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5S12.3,13.5,9.5,13.5z"/>
+    </svg>
+
+    ABC Servicio Técnico de PC y Redes
+  </div>
+  <p>Reparación · Mantenimiento · Redes · Auditoría Web</p>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a href="#servicios">Servicios</a>
+  <a href="auditoria.html">Auditoría Exprés</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<!-- SERVICIOS -->
+<div class="container" id="servicios">
+
+<h2>Servicios</h2>
+
+<div class="service-box">
+  <h3>Reparación de PC y Notebooks</h3>
+  <p>Diagnóstico, reparación de hardware, reemplazo de piezas, upgrades.</p>
+</div>
+
+<div class="service-box">
+  <h3>Formateo y Optimización del Sistema</h3>
+  <p>Instalación de Windows, Linux y macOS. Limpieza y optimización del sistema.</p>
+</div>
+
+<div class="service-box">
+  <h3>Eliminación de Virus y Malware</h3>
+  <p>Limpieza, eliminación de amenazas e instalación de protección.</p>
+</div>
+
+<div class="service-box">
+  <h3>Recuperación de Datos</h3>
+  <p>Recuperamos archivos borrados, discos dañados y unidades con fallas.</p>
+</div>
+
+<div class="service-box">
+  <h3>Instalación de Programas y Drivers</h3>
+  <p>Ofimática, antivirus, controladores y software general.</p>
+</div>
+
+<div class="service-box">
+  <h3>Soporte y Asistencia Remota</h3>
+  <p>Ayuda en línea, configuración y soporte técnico.</p>
+</div>
+
+<div class="service-box">
+  <h3>Redes y Configuración de Internet</h3>
+  <p>Wi-Fi, routers, redes domésticas y empresariales.</p>
+</div>
+
+<div class="service-box">
+  <h3>Instalación de Cámaras de Seguridad</h3>
+  <p>DVR/NVR, configuración, acceso remoto y asesoramiento.</p>
+</div>
+
+</div>
+
+<!-- CONTACTO -->
+<div class="container" id="contacto">
+
+<h2>Contacto</h2>
+
+<div class="contact">
+  <p><strong>Teléfono / WhatsApp:</strong> +54 9 351 313 9253</p>
+  <p><strong>Email:</strong> abcserviciotecnico@yahoo.com</p>
+  <p>Atendemos a domicilio y soporte remoto</p>
+
+  <a class="btn-whatsapp"
+     href="https://wa.me/543513139353"
+     target="_blank">Contactar por WhatsApp</a>
+</div>
+
+</div>
+
+<footer>
+<p>© 2025 ABC Servicio Técnico de PC y Redes. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
