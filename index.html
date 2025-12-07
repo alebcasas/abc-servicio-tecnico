@@ -4,103 +4,103 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ABC Servicio Técnico de PC y Redes</title>
-
-  <!-- SEO básico -->
-  <meta name="description" content="Servicio técnico de PC, notebooks y redes en Córdoba. Reparación, mantenimiento, soporte remoto y más.">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-
   <style>
-    :root {
-      --primary: #1D3557;
-      --secondary: #457B9D;
-      --accent: #E63946;
-      --bg: #F1FAEE;
-      --white: #ffffff;
-      --whatsapp: #25D366;
-    }
-
+    /* Reset y estilos base */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: var(--bg);
-      color: #333;
+      background: #F1FAEE;
+      color: #333333;
       line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     header {
-      background: var(--primary);
-      color: var(--white);
-      padding: 30px 15px;
+      background: #1D3557;
+      color: white;
+      padding: 20px;
       text-align: center;
     }
 
-    .logo {
-      font-size: 2.2em;
+    header .logo {
+      font-size: 1.8em;
       font-weight: bold;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
+      text-align: center;
+      gap: 8px;
     }
 
-    .logo svg {
-      width: 40px;
-      height: 40px;
-      margin-right: 10px;
-      fill: var(--accent);
+    header .logo svg {
+      width: 30px;
+      height: 30px;
+      fill: #E63946;
+      flex-shrink: 0;
     }
 
     nav {
-      background: var(--secondary);
+      background: #457B9D;
       display: flex;
       justify-content: center;
-      padding: 12px;
       flex-wrap: wrap;
+      padding: 10px;
+      gap: 12px;
     }
 
     nav a {
-      color: var(--white);
-      margin: 0 12px;
+      color: white;
       font-weight: bold;
-      padding: 8px 0;
+      font-size: 1em;
     }
 
     .container {
       max-width: 960px;
-      margin: auto;
-      padding: 15px;
+      margin: 20px auto;
+      padding: 0 15px;
     }
 
-    .service-box,
-    .contact {
-      background: var(--white);
+    h2 {
+      text-align: center;
+      font-size: 1.8em;
+      color: #1D3557;
+    }
+
+    .service-box {
+      background: white;
       margin: 15px 0;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      transition: transform .2s;
-    }
-
-    .service-box:hover {
-      transform: scale(1.01);
+      padding: 15px 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     .service-box h3 {
-      color: var(--primary);
       margin-top: 0;
+      color: #1D3557;
+      font-size: 1.3em;
+    }
+
+    .contact {
+      background: white;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      font-size: 1.1em;
     }
 
     .btn-whatsapp {
       display: inline-block;
-      background: var(--whatsapp);
-      color: var(--white);
-      padding: 12px 20px;
-      border-radius: 6px;
+      background: #25D366;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
       font-weight: bold;
-      margin-top: 10px;
+      margin-top: 12px;
       text-align: center;
+      font-size: 1.1em;
     }
 
     .btn-whatsapp:hover {
@@ -108,86 +108,126 @@
     }
 
     footer {
-      background: var(--primary);
-      color: var(--white);
+      background: #1D3557;
+      color: white;
       text-align: center;
-      padding: 18px 0;
+      padding: 15px 0;
       margin-top: 30px;
+      font-size: 0.9em;
     }
 
-    /* Responsive */
+
+    /* 📱 MODO RESPONSIVE PARA CELULARES */
     @media (max-width: 600px) {
-      .logo { font-size: 1.6em; }
-      header p { font-size: 0.95em; }
-      nav a { margin: 6px 10px; }
+
+      header .logo {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 1.4em;
+      }
+
+      nav {
+        padding: 8px;
+      }
+
+      nav a {
+        font-size: 0.95em;
+        padding: 5px;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      .service-box {
+        padding: 12px 15px;
+      }
+
+      .service-box h3 {
+        font-size: 1.2em;
+      }
+
+      .contact {
+        font-size: 1em;
+        padding: 15px;
+      }
+
+      .btn-whatsapp {
+        width: 100%;
+        padding: 14px;
+        font-size: 1.1em;
+      }
     }
   </style>
 </head>
 
 <body>
+  <header>
+    <div class="logo">
+      <svg viewBox="0 0 24 24"><path d="M22.7,17.3l-6-6c0.5-1,0.8-2.2,0.8-3.4c0-4.4-3.6-8-8-8S1.5,3.9,1.5,8.3s3.6,8,8,8c1.2,0,2.4-0.3,3.4-0.8l6,6c0.4,0.4,1,0.4,1.4,0S23.1,17.7,22.7,17.3z M9.5,13.5c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5S12.3,13.5,9.5,13.5z"/></svg>
+      ABC Servicio Técnico de PC y Redes
+    </div>
+    <p>Reparación · Mantenimiento · Redes · Soporte Técnico</p>
+  </header>
 
-<header>
-  <div class="logo">
-    <svg viewBox="0 0 24 24"><path d="M22.7,17.3l-6-6c0.5-1,0.8-2.2,0.8-3.4c0-4.4-3.6-8-8-8S1.5,3.9,1.5,8.3s3.6,8,8,8c1.2,0,2.4-0.3,3.4-0.8l6,6c0.4,0.4,1,0.4,1.4,0S23.1,17.7,22.7,17.3z M9.5,13.5c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5S12.3,13.5,9.5,13.5z"/></svg>
-    ABC Servicio Técnico de PC y Redes
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <div class="container" id="servicios">
+    <h2>Servicios</h2>
+
+    <div class="service-box">
+      <h3>Reparación de PC y Notebooks</h3>
+      <p>Diagnóstico, reparación de hardware, reemplazo de piezas, upgrades.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Formateo y Optimización del Sistema</h3>
+      <p>Instalación de Windows, Linux y macOS. Limpieza de sistema y optimización de velocidad.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Eliminación de Virus y Malware</h3>
+      <p>Limpieza, eliminación de virus, spyware, instalación de antivirus y protección.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Instalación de Programas y Drivers</h3>
+      <p>Office, suites de trabajo, antivirus, controladores y software necesario.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Soporte y Asistencia Remota</h3>
+      <p>Configuración, soporte técnico vía remoto, ayuda online y asesorías.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Redes y Configuración de Internet</h3>
+      <p>Instalación de redes, Wi-Fi, routers, redes domésticas y empresariales.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Instalación de Cámaras de Seguridad</h3>
+      <p>Instalación y configuración de cámaras, DVR/NVR, monitoreo remoto y asesoramiento.</p>
+    </div>
+
   </div>
-  <p>Reparación · Mantenimiento · Redes · Soporte Técnico</p>
-</header>
 
-<nav>
-  <a href="#servicios">Servicios</a>
-  <a href="#contacto">Contacto</a>
-</nav>
-
-<div class="container" id="servicios">
-  <h2>Servicios</h2>
-
-  <div class="service-box">
-    <h3>Reparación de PC y Notebooks</h3>
-    <p>Diagnóstico completo, mejora de rendimiento, reemplazo de partes y upgrades.</p>
+  <div class="container" id="contacto">
+    <h2>Contacto</h2>
+    <div class="contact">
+      <p><strong>Teléfono / WhatsApp:</strong> +54 9 351 313 9353</p>
+      <p><strong>Email:</strong> abcserviciotecnico@yahoo.com</p>
+      <p><strong>Ubicación:</strong> Córdoba Capital, Argentina</p>
+      <p>Atendemos a domicilio y soporte remoto</p>
+      <a class="btn-whatsapp" href="https://wa.me/543513139353" target="_blank">Contactar por WhatsApp</a>
+    </div>
   </div>
 
-  <div class="service-box">
-    <h3>Formateo y Optimización</h3>
-    <p>Instalación de sistemas, limpieza profunda y optimización para máxima velocidad.</p>
-  </div>
-
-  <div class="service-box">
-    <h3>Eliminación de Virus / Malware</h3>
-    <p>Eliminación segura de amenazas, protección y configuración de antivirus.</p>
-  </div>
-
-  <div class="service-box">
-    <h3>Programas y Drivers</h3>
-    <p>Instalación de software, Office, herramientas de trabajo y controladores.</p>
-  </div>
-
-  <div class="service-box">
-    <h3>Soporte Remoto</h3>
-    <p>Asistencia online sin necesidad de visitas, rápida y eficiente.</p>
-  </div>
-
-  <div class="service-box">
-    <h3>Redes e Internet</h3>
-    <p>Instalación, configuración de WiFi, routers y redes para casas y empresas.</p>
-  </div>
-</div>
-
-<div class="container" id="contacto">
-  <h2>Contacto</h2>
-  <div class="contact">
-    <p><strong>Teléfono / WhatsApp:</strong> +54 9 351 313 9353</p>
-    <p><strong>Email:</strong> abcserviciotecnico@yahoo.com</p>
-    <p><strong>Ubicación:</strong> Córdoba Capital</p>
-
-    <a class="btn-whatsapp" href="https://wa.me/543513139353" target="_blank">Contactar por WhatsApp</a>
-  </div>
-</div>
-
-<footer>
-  © 2025 ABC Servicio Técnico de PC y Redes
-</footer>
-
+  <footer>
+    <p>© 2025 ABC Servicio Técnico de PC y Redes. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
-
