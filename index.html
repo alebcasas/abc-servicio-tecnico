@@ -1,233 +1,300 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ABC Servicio Técnico de PC y Redes</title>
-  <style>
-    /* Reset y estilos base */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #F1FAEE;
-      color: #333333;
-      line-height: 1.6;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABC Servicio Técnico de PC y Redes</title>
 
-    header {
-      background: #1D3557;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+<style>
 
-    header .logo {
-      font-size: 1.8em;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      gap: 8px;
-    }
+/* ---------- BASE ---------- */
 
-    header .logo svg {
-      width: 30px;
-      height: 30px;
-      fill: #E63946;
-      flex-shrink: 0;
-    }
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#F1FAEE;
+    color:#222;
+    line-height:1.6;
+}
 
-    nav {
-      background: #457B9D;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 10px;
-      gap: 12px;
-    }
+a{ text-decoration:none; color:inherit; }
 
-    nav a {
-      color: white;
-      font-weight: bold;
-      font-size: 1em;
-    }
+/* ---------- HEADER ---------- */
 
-    .container {
-      max-width: 960px;
-      margin: 20px auto;
-      padding: 0 15px;
-    }
+header{
+    background:#1D3557;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
 
-    h2 {
-      text-align: center;
-      font-size: 1.8em;
-      color: #1D3557;
-    }
+.logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    font-weight:bold;
+    font-size:1.8em;
+}
 
-    .service-box {
-      background: white;
-      margin: 15px 0;
-      padding: 15px 20px;
-      border-radius: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+.logo svg{ width:30px; height:30px; fill:#E63946; }
 
-    .service-box h3 {
-      margin-top: 0;
-      color: #1D3557;
-      font-size: 1.3em;
-    }
+/* ---------- NAV ---------- */
 
-    .contact {
-      background: white;
-      padding: 20px;
-      border-radius: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      font-size: 1.1em;
-    }
+nav{
+    background:#457B9D;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:10px;
+    gap:15px;
+}
 
-    .btn-whatsapp {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 5px;
-      font-weight: bold;
-      margin-top: 12px;
-      text-align: center;
-      font-size: 1.1em;
-    }
+nav a{
+    color:white;
+    font-weight:bold;
+}
 
-    .btn-whatsapp:hover {
-      background: #1ebe5d;
-    }
+/* ---------- CONTAINERS ---------- */
 
-    footer {
-      background: #1D3557;
-      color: white;
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 30px;
-      font-size: 0.9em;
-    }
+.container{
+    max-width:950px;
+    margin:20px auto;
+    padding:0 15px;
+}
 
-    /* 📱 MODO RESPONSIVE PARA CELULARES */
-    @media (max-width: 600px) {
-      header .logo {
-        flex-direction: column;
-        gap: 5px;
-        font-size: 1.4em;
-      }
+h2{
+    text-align:center;
+    color:#1D3557;
+}
 
-      nav a {
-        font-size: 0.95em;
-      }
+/* ---------- CARDS ---------- */
 
-      h2 {
-        font-size: 1.5em;
-      }
+.service-box{
+    background:white;
+    padding:18px;
+    margin:15px 0;
+    border-radius:6px;
+    box-shadow:0 2px 4px rgba(0,0,0,.1);
+}
 
-      .service-box {
-        padding: 12px 15px;
-      }
+.service-box h3{ color:#1D3557; }
 
-      .service-box h3 {
-        font-size: 1.2em;
-      }
+/* ---------- BOTONES ---------- */
 
-      .contact {
-        font-size: 1em;
-        padding: 15px;
-      }
+.btn{
+    display:inline-block;
+    padding:12px 22px;
+    background:#E63946;
+    color:white;
+    border-radius:6px;
+    font-weight:bold;
+}
 
-      .btn-whatsapp {
-        width: 100%;
-        padding: 14px;
-        font-size: 1.1em;
-      }
-    }
-  </style>
+.btn:hover{ background:#d62f3d; }
+
+/* ---------- WHATSAPP ---------- */
+
+.btn-wa{
+    background:#25D366;
+}
+
+.btn-wa:hover{ background:#1ebe5d; }
+
+/* ---------- FORM ---------- */
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+input, textarea{
+    padding:10px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+textarea{ min-height:120px; }
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:600px){
+    .logo{ font-size:1.3em; flex-direction:column; }
+    .btn{ width:100%; text-align:center; }
+}
+
+</style>
 </head>
 
 <body>
-  <header>
+
+<!-- ================= HEADER ================= -->
+
+<header>
     <div class="logo">
-      <svg viewBox="0 0 24 24"><path d="M22.7,17.3l-6-6c0.5-1,0.8-2.2,0.8-3.4c0-4.4-3.6-8-8-8S1.5,3.9,1.5,8.3s3.6,8,8,8c1.2,0,2.4-0.3,3.4-0.8l6,6c0.4,0.4,1,0.4,1.4,0S23.1,17.7,22.7,17.3z M9.5,13.5c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5S12.3,13.5,9.5,13.5z"/></svg>
-      ABC Servicio Técnico de PC y Redes
-    </div>
-    <p>Reparación · Mantenimiento · Redes · Soporte Técnico</p>
-  </header>
 
-  <nav>
+        <!-- Ícono minimalista -->
+        <svg viewBox="0 0 24 24">
+            <path d="M22.7,17.3l-6-6c0.5-1,0.8-2.2,0.8-3.4c0-4.4-3.6-8-8-8S1.5,3.9,1.5,8.3s3.6,8,8,8c1.2,0,2.4-0.3,3.4-0.8l6,6c0.4,0.4,1,0.4,1.4,0S23.1,17.7,22.7,17.3z"/>
+        </svg>
+
+        ABC Servicio Técnico
+    </div>
+    <p>Reparación · Mantenimiento · Redes · Auditoría Web</p>
+</header>
+
+<!-- ================= NAV ================= -->
+
+<nav>
     <a href="#servicios">Servicios</a>
+    <a href="#auditoria">Auditoría Exprés</a>
     <a href="#contacto">Contacto</a>
-  </nav>
+</nav>
 
-  <div class="container" id="servicios">
-    <h2>Servicios</h2>
+<!-- ================= SERVICIOS ================= -->
 
-    <div class="service-box">
-      <h3>Reparación de PC y Notebooks</h3>
-      <p>Diagnóstico, reparación de hardware, reemplazo de piezas, upgrades.</p>
-    </div>
+<div class="container" id="servicios">
 
-    <div class="service-box">
-      <h3>Formateo y Optimización del Sistema</h3>
-      <p>Instalación de Windows, Linux y macOS. Limpieza de sistema y optimización de velocidad.</p>
-    </div>
+<h2>Servicios</h2>
 
-    <div class="service-box">
-      <h3>Eliminación de Virus y Malware</h3>
-      <p>Limpieza, eliminación de virus, spyware, instalación de antivirus y protección.</p>
-    </div>
+<div class="service-box">
+    <h3>🛠 Reparación de PC y Notebooks</h3>
+    <p>Diagnóstico, reparación y mantenimiento profesional.</p>
+</div>
 
-    <!-- NUEVO: Recuperación de datos -->
-    <div class="service-box">
-      <h3>Recuperación de Datos</h3>
-      <p>Recuperación de archivos borrados por accidente, fallas del sistema o daño físico del disco duro. Recuperamos datos de HDD, SSD, USB y tarjetas de memoria.</p>
-    </div>
+<div class="service-box">
+    <h3>💿 Formateo / Windows / Linux / MacOS</h3>
+    <p>Instalamos y optimizamos cualquier sistema operativo.</p>
+</div>
 
-    <div class="service-box">
-      <h3>Instalación de Programas y Drivers</h3>
-      <p>Office, suites de trabajo, antivirus, controladores y software necesario.</p>
-    </div>
+<div class="service-box">
+    <h3🧹>🧹 Eliminación de virus y malware</h3>
+    <p>Protegemos tu equipo de amenazas reales.</p>
+</div>
 
-    <div class="service-box">
-      <h3>Soporte y Asistencia Remota</h3>
-      <p>Configuración, soporte técnico vía remoto, ayuda online y asesorías.</p>
-    </div>
+<div class="service-box">
+    <h3>📦 Recuperación de datos</h3>
+    <p>Recuperamos archivos borrados accidentalmente o discos dañados.</p>
+</div>
 
-    <div class="service-box">
-      <h3>Redes y Configuración de Internet</h3>
-      <p>Instalación de redes, Wi-Fi, routers, redes domésticas y empresariales.</p>
-    </div>
+<div class="service-box">
+    <h3>🎥 Cámaras de seguridad</h3>
+    <p>Instalación profesional y configuración completa.</p>
+</div>
 
-    <div class="service-box">
-      <h3>Instalación de Cámaras de Seguridad</h3>
-      <p>Instalación y configuración de cámaras, DVR/NVR, monitoreo remoto y asesoramiento técnico.</p>
-    </div>
+</div>
 
-  </div>
 
-  <div class="container" id="contacto">
-    <h2>Contacto</h2>
-    <div class="contact">
-      <p><strong>Teléfono / WhatsApp:</strong> +54 9 351 313 9253</p>
-      <p><strong>Email:</strong> abcserviciotecnico@yahoo.com</p>
-      <p><strong>Ubicación:</strong> Córdoba Capital, Argentina</p>
-      <p>Atendemos a domicilio y soporte remoto</p>
-      <a class="btn-whatsapp" href="https://wa.me/543513139353" target="_blank">Contactar por WhatsApp</a>
-    </div>
-  </div>
+<!-- ================= AUDITORÍA ================= -->
 
-  <footer>
-    <p>© 2025 ABC Servicio Técnico de PC y Redes. Todos los derechos reservados.</p>
-  </footer>
+<div class="container" id="auditoria">
+
+<h2>Auditoría Exprés Web</h2>
+
+<div class="service-box">
+    <h3>🌐 ¿Qué es la Auditoría Exprés Web?</h3>
+    <p>
+        Es un análisis profesional destinado a mejorar la web de tu negocio,
+        aumentar clientes y posicionarte mejor en Google e IA.
+    </p>
+
+    <ul>
+        <li>✅ Copy y conversión</li>
+        <li>✅ SEO y keywords</li>
+        <li>✅ UX y estructura</li>
+    </ul>
+
+    <p>
+        Con años de experiencia, te damos mejoras reales que sí funcionan.
+    </p>
+</div>
+
+<div class="service-box">
+    <h3>💡 ¿Por qué es ideal para PYMES?</h3>
+    <ul>
+        <li>No apareces en Google</li>
+        <li>La gente no entiende qué ofreces</li>
+        <li>No conviertes visitas en clientes</li>
+        <li>No sabes qué mejorar ni por dónde empezar</li>
+    </ul>
+</div>
+
+<div class="service-box">
+    <h3>🚀 Beneficios</h3>
+
+    <p><strong>1) Más clientes sin publicidad</strong></p>
+    <p>Mejoramos textos y persuasión.</p>
+
+    <p><strong>2) Mejor posicionamiento en Google</strong></p>
+    <p>Optimización completa de SEO.</p>
+
+    <p><strong>3) Mejor experiencia para el cliente</strong></p>
+
+    <p><strong>4) Mejora en visibilidad IA</strong></p>
+
+    <p><strong>5) Plan de mejora claro</strong></p>
+</div>
+
+<div class="service-box">
+    <h3>⭐ ¿Por qué elegir esta auditoría?</h3>
+    <ul>
+        <li>Práctica</li>
+        <li>Profesional</li>
+        <li>Orientada a resultados</li>
+        <li>Accesible</li>
+        <li>Rápida</li>
+    </ul>
+
+    <a class="btn" href="#contacto">Solicitar Auditoría Ahora</a>
+</div>
+
+</div>
+
+
+<!-- ================= CONTACTO ================= -->
+
+<div class="container" id="contacto">
+
+<h2>Contacto</h2>
+
+<div class="service-box">
+
+<p>📱 WhatsApp / Teléfono: +54 9 351 313 9353</p>
+<p>📧 Email: abcserviciotecnico@yahoo.com</p>
+
+<a class="btn btn-wa" href="https://wa.me/543513139353">Escribirme por WhatsApp</a>
+
+</div>
+
+<!-- FORMULARIO REAL -->
+
+<div class="service-box">
+
+<h3>📩 Envíame un mensaje</h3>
+
+<form action="https://formsubmit.co/abcserviciotecnico@yahoo.com" method="POST">
+
+<input type="text" name="nombre" placeholder="Tu nombre" required>
+<input type="email" name="email" placeholder="Tu email" required>
+<textarea name="mensaje" placeholder="Escribe tu consulta..." required></textarea>
+
+<input type="hidden" name="_subject" value="Nuevo mensaje desde la web">
+
+<button class="btn" type="submit">Enviar mensaje</button>
+
+</form>
+
+</div>
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+<p>© 2025 ABC Servicio Técnico de PC y Redes.</p>
+</footer>
+
+
 </body>
 </html>
-
