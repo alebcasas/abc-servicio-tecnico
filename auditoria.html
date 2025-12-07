@@ -104,7 +104,6 @@ textarea{ min-height:90px; }
     padding:12px;
     border-radius:6px;
     font-weight:bold;
-    cursor:pointer;
 }
 
 .btn:hover{ background:#d32f40; }
@@ -117,7 +116,7 @@ textarea{ min-height:90px; }
     color:white;
     border-radius:6px;
     font-weight:bold;
-    margin-top:10px;
+    margin-top:15px;
 }
 
 .btn-volver:hover {
@@ -145,11 +144,9 @@ footer{
 <!-- HEADER -->
 <header>
     <div class="logo">
-
         <svg viewBox="0 0 24 24">
             <path d="M22.7,17.3l-6-6c0.5-1,0.8-2.2,0.8-3.4c0-4.4-3.6-8-8-8S1.5,3.9,1.5,8.3s3.6,8,8,8c1.2,0,2.4-0.3,3.4-0.8l6,6c0.4,0.4,1,0.4,1.4,0S23.1,17.7,22.7,17.3z"/>
         </svg>
-
         Auditoría Exprés Web
     </div>
     <p>Optimiza tu web · Atrae clientes · Mejora tu visibilidad</p>
@@ -169,15 +166,8 @@ footer{
 
 <div class="service-box">
     <h3>🌐 ¿De qué se trata?</h3>
-    <p>
-        Analizamos tu sitio web para mejorar comunicación, conversión,
-        posicionamiento en Google e incluso visibilidad en asistentes con IA.
-    </p>
-    <ul>
-        <li>✅ Copy y conversión</li>
-        <li>✅ SEO y uso de keywords</li>
-        <li>✅ UX y estructura</li>
-    </ul>
+    <p>Analizamos tu sitio web para mejorar comunicación, conversión,
+    posicionamiento en Google y visibilidad ante asistentes con IA.</p>
 </div>
 
 <div class="service-box">
@@ -208,23 +198,23 @@ footer{
 
     <p>Completa el formulario para recibir tu Auditoría Exprés Web.</p>
 
-    <form action="https://formsubmit.co/0af1cdda5199c4ea9d2bdcc6617b0dd2" method="POST">
+    <!-- *** IMPORTANTE: AQUÍ VA TU EMAIL REAL *** -->
+    <form action="https://formsubmit.co/abcserviciotecnico@yahoo.com" method="POST">
 
         <input type="text" name="nombre" placeholder="Tu nombre" required>
         <input type="email" name="email" placeholder="Tu email" required>
         <input type="text" name="web" placeholder="URL de tu sitio web">
         <textarea name="mensaje" placeholder="Describe qué necesitás..." required></textarea>
 
-        <!-- CONFIG PARA FORM SUBMIT -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
+        <!-- Asunto del email -->
         <input type="hidden" name="_subject" value="Nueva solicitud de auditoría web">
-        <input type="hidden" name="_next" value="https://alebcasas.github.io/auditoria.html#success">
+
+        <!-- REDIRECCIÓN A PÁGINA DE ÉXITO -->
+        <input type="hidden" name="_next" value="https://alebcasas.github.io/gracias.html">
 
         <button class="btn" type="submit">Enviar solicitud</button>
     </form>
 
-    <!-- BOTON VOLVER AL INICIO -->
     <p>
         <a class="btn-volver" href="index.html">Volver al inicio</a>
     </p>
