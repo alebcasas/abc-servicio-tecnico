@@ -1,279 +1,198 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ABC Servicio Técnico de PC y Redes</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABC Servicio Técnico de PC y Redes</title>
+  <style>
+    /* Reset y estilos base */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #F1FAEE;
+      color: #333333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-<style>
-/* Reset y estilos base */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #F1FAEE;
-  color: #333;
-  line-height: 1.6;
-}
+    header {
+      background: #1D3557;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header .logo {
+      font-size: 2em;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    header .logo svg {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+      fill: #E63946;
+    }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+    nav {
+      background: #457B9D;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      font-weight: bold;
+    }
 
-/* HEADER */
-header {
-  background: #1D3557;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+    .container {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
 
-header .logo {
-  font-size: 1.8em;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
+    .service-box {
+      background: white;
+      margin: 15px 0;
+      padding: 15px 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .service-box h3 {
+      margin-top: 0;
+      color: #1D3557;
+    }
 
-header .logo svg {
-  width: 30px;
-  height: 30px;
-  fill: #E63946;
-}
+    .contact {
+      background: white;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
-/* NAV */
-nav {
-  background: #457B9D;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 10px;
-  gap: 12px;
-}
+    footer {
+      background: #1D3557;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 30px;
+    }
 
-nav a {
-  color: white;
-  font-weight: bold;
-}
+    .btn-whatsapp {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .btn-whatsapp:hover {
+      background: #1ebe5d;
+    }
 
-/* CONTENT */
-.container {
-  max-width: 960px;
-  margin: 20px auto;
-  padding: 0 15px;
-}
-
-h2 {
-  text-align: center;
-  font-size: 1.8em;
-  color: #1D3557;
-}
-
-/* ICONOS */
-.icon {
-  width: 22px;
-  height: 22px;
-  fill: #1D3557;
-  margin-right: 8px;
-  transition: transform .25s ease;
-}
-
-.service-box h3:hover .icon {
-  transform: scale(1.2);
-}
-
-/* CAJAS */
-.service-box {
-  background: white;
-  margin: 15px 0;
-  padding: 15px 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
-}
-
-.service-box h3 {
-  margin-top: 0;
-  color: #1D3557;
-  font-size: 1.3em;
-  font-weight: bold;
-  display:flex;
-  align-items:center;
-}
-
-/* CONTACTO */
-.contact {
-  background: white;
-  padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
-}
-
-.btn-whatsapp {
-  display: inline-block;
-  background: #25D366;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-top: 12px;
-}
-
-.btn-whatsapp:hover {
-  background: #1ebe5d;
-}
-
-/* BOTON VOLVER */
-.btn-volver {
-  display:inline-block;
-  padding:10px 18px;
-  background:#457B9D;
-  color:white;
-  border-radius:6px;
-  font-weight:bold;
-  margin-top:10px;
-}
-
-.btn-volver:hover {
-  background:#3b6d88;
-}
-
-/* FOOTER */
-footer {
-  background: #1D3557;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 30px;
-}
-
-/* RESPONSIVE */
-@media(max-width:600px){
-  header .logo{ flex-direction:column; font-size:1.4em; }
-}
-</style>
+    /* BOTÓN VOLVER */
+    .btn-volver {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #457B9D;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .btn-volver:hover {
+      background: #3b6d88;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="logo">
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <svg viewBox="0 0 24 24"><path d="M22.7,17.3l-6-6c0.5-1,0.8-2.2,0.8-3.4c0-4.4-3.6-8-8-8S1.5,3.9,1.5,8.3s3.6,8,8,8c1.2,0,2.4-0.3,3.4-0.8l6,6c0.4,0.4,1,0.4,1.4,0S23.1,17.7,22.7,17.3z"/></svg>
+      ABC Servicio Técnico de PC y Redes
+    </div>
+    <p>Reparación · Mantenimiento · Redes · Soporte Técnico</p>
+  </header>
 
-    <svg viewBox="0 0 24 24">
-      <path d="M22.7,17.3l-6-6c0.5-1,0.8-2.2,0.8-3.4c0-4.4-3.6-8-8-8S1.5,3.9,1.5,8.3s3.6,8,8,8c1.2,0,2.4-0.3,3.4-0.8l6,6c0.4,0.4,1,0.4,1.4,0S23.1,17.7,22.7,17.3z"/>
-    </svg>
+  <!-- NAV -->
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-    ABC Servicio Técnico de PC y Redes
+  <!-- SERVICIOS -->
+  <div class="container" id="servicios">
+    <h2>Servicios</h2>
+
+    <div class="service-box">
+      <h3>Reparación de PC y Notebooks</h3>
+      <p>Diagnóstico, reparación de hardware, reemplazo de piezas, upgrades.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Formateo y Optimización del Sistema</h3>
+      <p>Instalación de Windows, limpieza del sistema, optimización de velocidad. Compatible con Windows, Linux y macOS.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Eliminación de Virus y Malware</h3>
+      <p>Limpieza, eliminación de virus, spyware, instalación de antivirus y protección.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Instalación de Programas y Drivers</h3>
+      <p>Office, suites de trabajo, antivirus, controladores y software necesario.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Soporte y Asistencia Remota</h3>
+      <p>Configuración, soporte técnico vía remoto, ayuda online, asesorías.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Redes y Configuración de Internet</h3>
+      <p>Instalación y configuración de redes, Wi-Fi, routers, redes domésticas/empresariales.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Instalación de Cámaras de Seguridad</h3>
+      <p>Instalación y configuración de cámaras de seguridad, DVR/NVR y monitoreo remoto.</p>
+    </div>
+
   </div>
-  <p>Reparación · Mantenimiento · Redes · Auditoría Web</p>
-</header>
 
-<!-- NAV -->
-<nav>
-  <a href="#servicios">Servicios</a>
-  <a href="auditoria.html">Auditoría Exprés</a>
-  <a href="#contacto">Contacto</a>
-</nav>
+  <!-- CONTACTO -->
+  <div class="container" id="contacto">
 
-<!-- SERVICIOS -->
-<div class="container" id="servicios">
+    <h2>Contacto</h2>
 
-<h2>Servicios</h2>
+    <div class="contact">
+      <p><strong>Teléfono / WhatsApp:</strong> +54 9 351 313 9353</p>
+      <p><strong>Email:</strong> abcserviciotecnico@yahoo.com</p>
+      <p><strong>Ubicación:</strong> Córdoba Capital, Argentina</p>
+      <p>Atendemos a domicilio y soporte remoto</p>
 
-<!-- ICONOS MODERNOS -->
+      <a class="btn-whatsapp" href="https://wa.me/543513139353" target="_blank">Contactar por WhatsApp</a>
 
-<div class="service-box">
-  <h3>
-    <svg class="icon" viewBox="0 0 24 24"><path d="M3 4h18v12H3z"/><path d="M8 20h8"/></svg>
-    Reparación de PC y Notebooks
-  </h3>
-  <p>Diagnóstico, reparación de hardware, reemplazo de piezas, upgrades.</p>
-</div>
+      <!-- BOTÓN VOLVER -->
+      <br>
+      <a class="btn-volver" href="#top">Volver al inicio</a>
 
-<div class="service-box">
-  <h3>
-    <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16v10H4z"/><path d="M7 20h10"/></svg>
-    Formateo y Optimización del Sistema
-  </h3>
-  <p>Instalación de sistemas, limpieza y optimización.</p>
-</div>
+    </div>
+  </div>
 
-<div class="service-box">
-  <h3>
-    <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 8-7 10C8.5 20 5 17 5 12V6z"/></svg>
-    Eliminación de Virus y Malware
-  </h3>
-  <p>Limpieza y protección completa.</p>
-</div>
-
-<div class="service-box">
-  <h3>
-    <svg class="icon" viewBox="0 0 24 24"><path d="M3 7h18v10H3z"/><path d="M7 3h10"/></svg>
-    Recuperación de Datos
-  </h3>
-  <p>Archivos borrados, discos dañados y unidades con fallas.</p>
-</div>
-
-<div class="service-box">
-  <h3>
-    <svg class="icon" viewBox="0 0 24 24"><path d="M2 12h20"/><path d="M12 2v20"/></svg>
-    Instalación de Programas y Drivers
-  </h3>
-  <p>Software, suites y controladores.</p>
-</div>
-
-<div class="service-box">
-  <h3>
-    <svg class="icon" viewBox="0 0 24 24"><path d="M3 10h6V4H3z"/><path d="M15 10h6V4h-6z"/></svg>
-    Soporte y Asistencia Remota
-  </h3>
-  <p>Ayuda en línea y soporte técnico.</p>
-</div>
-
-<div class="service-box">
-  <h3>
-    <svg class="icon" viewBox="0 0 24 24"><path d="M2 12h20"/><path d="M6 16h12"/></svg>
-    Configuración de Internet y Redes
-  </h3>
-  <p>Wi-Fi, routers y redes domésticas.</p>
-</div>
-
-<div class="service-box">
-  <h3>
-    <svg class="icon" viewBox="0 0 24 24"><path d="M3 7h9v6H3z"/><circle cx="18" cy="10" r="3"/></svg>
-    Instalación de Cámaras de Seguridad
-  </h3>
-  <p>Cámaras, DVR/NVR y monitoreo.</p>
-</div>
-
-</div>
-
-<!-- CONTACTO -->
-<div class="container" id="contacto">
-
-<h2>Contacto</h2>
-
-<div class="contact">
-  <p><strong>Teléfono / WhatsApp:</strong> +54 9 351 313 9253</p>
-  <p><strong>Email:</strong> abcserviciotecnico@yahoo.com</p>
-
-  <a class="btn-whatsapp"
-     href="https://wa.me/543513139353"
-     target="_blank">Contactar por WhatsApp</a>
-</div>
-
-<!-- BOTON VOLVER -->
-<p>
-  <a class="btn-volver" href="#top">Volver al inicio</a>
-</p>
-
-</div>
-
-<footer>
-<p>© 2025 ABC Servicio Técnico de PC y Redes. Todos los derechos reservados.</p>
-</footer>
+  <footer>
+    <p>© 2025 ABC Servicio Técnico de PC y Redes. Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>
