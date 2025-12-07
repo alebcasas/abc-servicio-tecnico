@@ -2,69 +2,221 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device">
-<title>Auditoría Exprés Web - ABC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditoría Exprés Web – ABC</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#F1FAEE;color:#222;line-height:1.6;}
-.container{max-width:950px;margin:20px auto;padding:0 15px;}
-.service-box{background:white;padding:18px;margin:15px 0;border-radius:6px;
-box-shadow:0 2px 4px rgba(0,0,0,.1);}
-h2{color:#1D3557;text-align:center;}
-h3{color:#1D3557;font-weight:bold;}
-a{color:#E63946;font-weight:bold;}
+
+/* BASE */
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#F1FAEE;
+    color:#333;
+    line-height:1.6;
+}
+
+a{ text-decoration:none; color:inherit; }
+
+/* HEADER */
+header{
+    background:#1D3557;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+header .logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    font-size:1.7em;
+    font-weight:bold;
+}
+
+header .logo svg{
+    width:30px;
+    height:30px;
+    fill:#E63946;
+}
+
+/* NAV */
+nav{
+    background:#457B9D;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    padding:10px;
+}
+
+nav a{
+    color:white;
+    font-weight:bold;
+}
+
+/* CONTENT */
+.container{
+    max-width:950px;
+    margin:20px auto;
+    padding:0 15px;
+}
+
+h2{
+    text-align:center;
+    color:#1D3557;
+}
+
+.service-box{
+    background:white;
+    padding:18px;
+    border-radius:6px;
+    margin:15px 0;
+    box-shadow:0 2px 4px rgba(0,0,0,.1);
+}
+
+.service-box h3{
+    color:#1D3557;
+    font-weight:bold;
+}
+
+/* FORM */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+input, textarea{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+textarea{ min-height:90px; }
+
+/* BOTON */
+.btn{
+    background:#E63946;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.btn:hover{ background:#d32f40; }
+
+/* FOOTER */
+footer{
+    background:#1D3557;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+    header .logo{ flex-direction:column; font-size:1.3em; }
+}
+
 </style>
 </head>
-
 <body>
 
+<!-- HEADER -->
+<header>
+    <div class="logo">
+
+        <svg viewBox="0 0 24 24">
+            <path d="M22.7,17.3l-6-6c0.5-1,0.8-2.2,0.8-3.4c0-4.4-3.6-8-8-8S1.5,3.9,1.5,8.3s3.6,8,8,8c1.2,0,2.4-0.3,3.4-0.8l6,6c0.4,0.4,1,0.4,1.4,0S23.1,17.7,22.7,17.3z"/>
+        </svg>
+
+        Auditoría Exprés Web
+    </div>
+    <p>Optimiza tu web · Atrae clientes · Mejora tu visibilidad</p>
+</header>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html#servicios">Servicios</a>
+    <a href="auditoria.html">Auditoría Exprés</a>
+    <a href="index.html#contacto">Contacto</a>
+</nav>
+
+<!-- CONTENIDO -->
 <div class="container">
 
 <h2>Auditoría Exprés Web</h2>
 
 <div class="service-box">
-<h3>🌐 ¿De qué trata?</h3>
-<p>
-Analizamos tu web para mejorar la comunicación, atraer más clientes
-y posicionarte mejor en Google e Inteligencia Artificial.
-</p>
-<ul>
-<li>✅ Copy y conversión</li>
-<li>✅ SEO y keywords</li>
-<li>✅ UX y estructura</li>
-</ul>
+    <h3>🌐 ¿De qué se trata?</h3>
+    <p>
+        Analizamos tu sitio web para mejorar comunicación, conversiones,
+        posicionamiento en Google e incluso visibilidad en asistentes con IA.
+    </p>
+    <ul>
+        <li>✅ Copy y conversión</li>
+        <li>✅ SEO y uso de keywords</li>
+        <li>✅ UX y estructura</li>
+    </ul>
 </div>
 
 <div class="service-box">
-<h3>💡 ¿Por qué es ideal para PYMES?</h3>
-<ul>
-<li>No apareces en Google</li>
-<li>No conviertes visitas</li>
-<li>No sabes qué mejorar</li>
-<li>Tienes web pero no funciona</li>
-</ul>
+    <h3>💡 ¿Por qué conviene a pequeñas y medianas empresas?</h3>
+    <ul>
+        <li>No aparecen en Google</li>
+        <li>No convierten visitas en clientes</li>
+        <li>No saben qué mejorar</li>
+        <li>Tienen web pero no funciona</li>
+    </ul>
 </div>
 
 <div class="service-box">
-<h3>🚀 Beneficios</h3>
-<ul>
-<li>Más clientes sin publicidad</li>
-<li>Mayor visibilidad</li>
-<li>Tus clientes entienden mejor tu servicio</li>
-<li>Optimización para IA</li>
-<li>Plan de mejora total</li>
-</ul>
+    <h3>🚀 Beneficios</h3>
+    <ul>
+        <li>Más clientes sin publicidad</li>
+        <li>Mejor visibilidad en buscadores</li>
+        <li>Texto claro y persuasivo</li>
+        <li>Usuario entiende rápido tu servicio</li>
+        <li>Plan de mejora completo</li>
+    </ul>
 </div>
 
-<div class="service.box">
-<h3>📩 Solicitar auditoría</h3>
-<p>
-Puedes solicitar tu auditoría contactándonos desde aquí:
-</p>
-<a href="index.html#contacto">Ir al contacto</a>
+<!-- FORMULARIO COMPLETO -->
+<div class="service-box">
+
+    <h3>📩 Solicitar Auditoría</h3>
+
+    <p>
+        Completa el formulario para recibir tu Auditoría Exprés Web.
+    </p>
+
+    <form action="https://formsubmit.co/abcserviciotecnico@yahoo.com" method="POST">
+
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu email" required>
+        <input type="text" name="web" placeholder="URL de tu sitio web">
+        <textarea name="mensaje" placeholder="Describe qué necesitás..." required></textarea>
+
+        <input type="hidden" name="_subject" value="Nueva solicitud de auditoría web">
+
+        <button class="btn" type="submit">Enviar solicitud</button>
+    </form>
+
+    <p style="margin-top:15px;">
+        <a href="index.html#contacto">Ir al contacto</a>
+    </p>
+
 </div>
 
 </div>
+
+<footer>
+<p>© 2025 ABC Servicio Técnico de PC y Redes.</p>
+</footer>
 
 </body>
 </html>
