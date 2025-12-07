@@ -206,20 +206,21 @@ footer{
 
     <p>Completá el formulario para recibir tu Auditoría Exprés Web.</p>
 
-    <form action="https://formsubmit.co/abcserviciotecnico@yahoo.com" method="POST">
+    <!-- FORMULARIO ACTUALIZADO CON TOKEN -->
+    <form action="https://formsubmit.co/0af1cdda5199c4ea9d2bdcc6617b0dd2" method="POST">
 
         <input type="text" name="nombre" placeholder="Tu nombre" required>
         <input type="email" name="email" placeholder="Tu email" required>
         <input type="text" name="web" placeholder="URL de tu sitio web">
         <textarea name="mensaje" placeholder="Describe qué necesitás..." required></textarea>
 
-        <!-- Asunto del email -->
+        <!-- Asunto -->
         <input type="hidden" name="_subject" value="Nueva solicitud de auditoría web">
 
         <!-- Protección anti spam -->
         <input type="text" name="_honey" style="display:none">
 
-        <!-- Redirección luego de enviar -->
+        <!-- Redirección -->
         <input type="hidden" name="_next" value="index.html">
 
         <button class="btn" type="submit">Enviar solicitud</button>
