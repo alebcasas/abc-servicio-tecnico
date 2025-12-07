@@ -1,146 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>ABC Servicio Técnico de PC y Redes</title>
 
 <style>
-
-/* BASE */
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#F1FAEE;
-    color:#333;
-    line-height:1.6;
+/* Reset y estilos base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #F1FAEE;
+  color: #333;
+  line-height: 1.6;
 }
-a{ text-decoration:none; color:inherit; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 /* HEADER */
-header{
-    background:#1D3557;
-    color:white;
-    padding:20px;
-    text-align:center;
+header {
+  background: #1D3557;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
-header .logo{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:8px;
-    font-size:1.8em;
-    font-weight:bold;
+
+header .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
-header .logo svg{
-    width:30px;
-    height:30px;
-    fill:#E63946;
+
+header .logo svg {
+  width: 30px;
+  height: 30px;
+  fill: #E63946;
 }
 
 /* NAV */
-nav{
-    background:#457B9D;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:12px;
-    padding:10px;
+nav {
+  background: #457B9D;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 12px;
 }
-nav a{ color:white; font-weight:bold; }
+
+nav a {
+  color: white;
+  font-weight: bold;
+}
 
 /* CONTENT */
-.container{
-    max-width:960px;
-    margin:20px auto;
-    padding:0 15px;
-}
-h2{ text-align:center; color:#1D3557; }
-
-/* BOX */
-.service-box{
-    background:white;
-    padding:18px;
-    border-radius:6px;
-    margin:15px 0;
-    box-shadow:0 2px 4px rgba(0,0,0,.1);
+.container {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
 }
 
-/* TITULOS CON ICONOS */
-.service-box h3{
-    display:flex;
-    align-items:center;
-    font-weight:bold;
-    color:#1D3557;
+h2 {
+  text-align: center;
+  font-size: 1.8em;
+  color: #1D3557;
 }
 
-/* ICONOS ESTILO AUDITORÍA */
-.icon{
-    width:30px;
-    height:30px;
-    fill:#E63946;
-    margin-right:10px;
-
-    transition:transform .25s ease;
+/* ICONOS */
+.icon {
+  width: 22px;
+  height: 22px;
+  fill: #1D3557;
+  margin-right: 8px;
+  transition: transform .25s ease;
 }
-.service-box h3:hover .icon{
-    transform: scale(1.2);
+
+.service-box h3:hover .icon {
+  transform: scale(1.2);
+}
+
+/* CAJAS */
+.service-box {
+  background: white;
+  margin: 15px 0;
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.service-box h3 {
+  margin-top: 0;
+  color: #1D3557;
+  font-size: 1.3em;
+  font-weight: bold;
+  display:flex;
+  align-items:center;
 }
 
 /* CONTACTO */
-.contact{
-    background:white;
-    padding:20px;
-    border-radius:6px;
-    box-shadow:0 2px 4px rgba(0,0,0,.1);
+.contact {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
-.btn-whatsapp{
-    display:inline-block;
-    background:#25D366;
-    color:white;
-    padding:12px 25px;
-    border-radius:5px;
-    font-weight:bold;
-    margin-top:12px;
+
+.btn-whatsapp {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 12px;
 }
-.btn-whatsapp:hover{ background:#1ebe5d; }
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+}
+
+/* BOTON VOLVER */
+.btn-volver {
+  display:inline-block;
+  padding:10px 18px;
+  background:#457B9D;
+  color:white;
+  border-radius:6px;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+.btn-volver:hover {
+  background:#3b6d88;
+}
 
 /* FOOTER */
-footer{
-    background:#1D3557;
-    color:white;
-    text-align:center;
-    padding:15px;
-    margin-top:30px;
+footer {
+  background: #1D3557;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
 }
 
 /* RESPONSIVE */
 @media(max-width:600px){
-    header .logo{ flex-direction:column; font-size:1.4em; }
+  header .logo{ flex-direction:column; font-size:1.4em; }
 }
-
 </style>
 </head>
+
 <body>
 
 <!-- HEADER -->
 <header>
-    <div class="logo">
+  <div class="logo">
 
-        <svg viewBox="0 0 24 24">
-        <path d="M22.7 17.3l-6-6c.5-1 .8-2.2 .8-3.4C17.5 3.5 13.9 0 9.5 0S1.5 3.5 1.5 7.9s3.6 7.9 8 7.9c1.2 0 2.4-.3 3.4-.8l6 6c.4.4 1 .4 1.4 0l1.4-1.4c.4-.4.4-1 0-1.4z"/>
-        </svg>
+    <svg viewBox="0 0 24 24">
+      <path d="M22.7,17.3l-6-6c0.5-1,0.8-2.2,0.8-3.4c0-4.4-3.6-8-8-8S1.5,3.9,1.5,8.3s3.6,8,8,8c1.2,0,2.4-0.3,3.4-0.8l6,6c0.4,0.4,1,0.4,1.4,0S23.1,17.7,22.7,17.3z"/>
+    </svg>
 
-        ABC Servicio Técnico de PC y Redes
-    </div>
-    <p>Reparación · Sistemas · Seguridad · Auditoría Web</p>
+    ABC Servicio Técnico de PC y Redes
+  </div>
+  <p>Reparación · Mantenimiento · Redes · Auditoría Web</p>
 </header>
 
 <!-- NAV -->
 <nav>
-    <a href="#servicios">Servicios</a>
-    <a href="auditoria.html">Auditoría Exprés</a>
-    <a href="#contacto">Contacto</a>
+  <a href="#servicios">Servicios</a>
+  <a href="auditoria.html">Auditoría Exprés</a>
+  <a href="#contacto">Contacto</a>
 </nav>
 
 <!-- SERVICIOS -->
@@ -148,78 +182,70 @@ footer{
 
 <h2>Servicios</h2>
 
-<!-- REPARACIÓN -->
+<!-- ICONOS MODERNOS -->
+
 <div class="service-box">
-<h3>
-    <svg class="icon" viewBox="0 0 24 24">
-      <path d="M22.7 17.3l-6-6c.5-1 .8-2.2 .8-3.4C17.5 3.5 13.9 0 9.5 0S1.5 3.5 1.5 7.9s3.6 7.9 8 7.9c1.2 0 2.4-.3 3.4-.8l6 6c.4.4 1 .4 1.4 0l1.4-1.4c.4-.4.4-1 0-1.4z"/>
-    </svg>
+  <h3>
+    <svg class="icon" viewBox="0 0 24 24"><path d="M3 4h18v12H3z"/><path d="M8 20h8"/></svg>
     Reparación de PC y Notebooks
-</h3>
-<p>Diagnóstico, reparación y upgrades.</p>
+  </h3>
+  <p>Diagnóstico, reparación de hardware, reemplazo de piezas, upgrades.</p>
 </div>
 
-<!-- FORMATEO -->
 <div class="service-box">
-<h3>
-    <svg class="icon" viewBox="0 0 24 24"><path d="M4 3h16v12H4zM8 17h8v4H8z"/></svg>
-    Formateo y Optimización
-</h3>
-<p>Windows, Linux y macOS. Limpieza completa.</p>
+  <h3>
+    <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16v10H4z"/><path d="M7 20h10"/></svg>
+    Formateo y Optimización del Sistema
+  </h3>
+  <p>Instalación de sistemas, limpieza y optimización.</p>
 </div>
 
-<!-- VIRUS -->
 <div class="service-box">
-<h3>
-    <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.8 9-8 10-4.2-1-8-5-8-10V6l8-4z"/></svg>
+  <h3>
+    <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 8-7 10C8.5 20 5 17 5 12V6z"/></svg>
     Eliminación de Virus y Malware
-</h3>
-<p>Limpieza e instalación de protección.</p>
+  </h3>
+  <p>Limpieza y protección completa.</p>
 </div>
 
-<!-- RECUPERAR -->
 <div class="service-box">
-<h3>
-    <svg class="icon" viewBox="0 0 24 24"><path d="M12 3l6 6h-4v6H10V9H6l6-6zM5 20h14v2H5z"/></svg>
+  <h3>
+    <svg class="icon" viewBox="0 0 24 24"><path d="M3 7h18v10H3z"/><path d="M7 3h10"/></svg>
     Recuperación de Datos
-</h3>
-<p>Archivos borrados y discos dañados.</p>
+  </h3>
+  <p>Archivos borrados, discos dañados y unidades con fallas.</p>
 </div>
 
-<!-- PROGRAMAS -->
 <div class="service-box">
-<h3>
-    <svg class="icon" viewBox="0 0 24 24"><path d="M3 3h18v10H3zM7 15h10v6H7z"/></svg>
-    Instalación de Programas
-</h3>
-<p>Drivers, Office, antivirus y más.</p>
+  <h3>
+    <svg class="icon" viewBox="0 0 24 24"><path d="M2 12h20"/><path d="M12 2v20"/></svg>
+    Instalación de Programas y Drivers
+  </h3>
+  <p>Software, suites y controladores.</p>
 </div>
 
-<!-- SOPORTE -->
 <div class="service-box">
-<h3>
-    <svg class="icon" viewBox="0 0 24 24"><path d="M2 12h20M12 2v20"/></svg>
-    Soporte Remoto
-</h3>
-<p>Configuración y asistencia online.</p>
+  <h3>
+    <svg class="icon" viewBox="0 0 24 24"><path d="M3 10h6V4H3z"/><path d="M15 10h6V4h-6z"/></svg>
+    Soporte y Asistencia Remota
+  </h3>
+  <p>Ayuda en línea y soporte técnico.</p>
 </div>
 
-<!-- REDES -->
 <div class="service-box">
-<h3>
-    <svg class="icon" viewBox="0 0 24 24"><path d="M2 10c5-6 15-6 20 0zM5 13c4-4 10-4 14 0zM9 16c2-2 4-2 6 0z"/></svg>
-    Redes e Internet
-</h3>
-<p>WiFi, routers y redes.</p>
+  <h3>
+    <svg class="icon" viewBox="0 0 24 24"><path d="M2 12h20"/><path d="M6 16h12"/></svg>
+    Configuración de Internet y Redes
+  </h3>
+  <p>Wi-Fi, routers y redes domésticas.</p>
 </div>
 
-<!-- CAMARAS -->
 <div class="service-box">
-<h3>
-    <svg class="icon" viewBox="0 0 24 24"><path d="M3 9h13l3 3v3H3zM19 11h2v6h-2z"/></svg>
-    Instalación de Cámaras
-</h3>
-<p>Configuración DVR/NVR.</p>
+  <h3>
+    <svg class="icon" viewBox="0 0 24 24"><path d="M3 7h9v6H3z"/><circle cx="18" cy="10" r="3"/></svg>
+    Instalación de Cámaras de Seguridad
+  </h3>
+  <p>Cámaras, DVR/NVR y monitoreo.</p>
 </div>
 
 </div>
@@ -230,18 +256,23 @@ footer{
 <h2>Contacto</h2>
 
 <div class="contact">
-<p><strong>Teléfono / WhatsApp:</strong> +54 9 351 313 9253</p>
-<p><strong>Email:</strong> abcserviciotecnico@yahoo.com</p>
+  <p><strong>Teléfono / WhatsApp:</strong> +54 9 351 313 9253</p>
+  <p><strong>Email:</strong> abcserviciotecnico@yahoo.com</p>
 
-<a class="btn-whatsapp"
-   href="https://wa.me/543513139353"
-   target="_blank">Contactar por WhatsApp</a>
+  <a class="btn-whatsapp"
+     href="https://wa.me/543513139353"
+     target="_blank">Contactar por WhatsApp</a>
 </div>
+
+<!-- BOTON VOLVER -->
+<p>
+  <a class="btn-volver" href="#top">Volver al inicio</a>
+</p>
 
 </div>
 
 <footer>
-<p>© 2025 ABC Servicio Técnico de PC y Redes.</p>
+<p>© 2025 ABC Servicio Técnico de PC y Redes. Todos los derechos reservados.</p>
 </footer>
 
 </body>
