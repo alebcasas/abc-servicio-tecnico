@@ -96,7 +96,7 @@ input, textarea{
 
 textarea{ min-height:90px; }
 
-/* BOTON */
+/* BOTON PRINCIPAL */
 .btn{
     background:#E63946;
     color:white;
@@ -107,6 +107,21 @@ textarea{ min-height:90px; }
 }
 
 .btn:hover{ background:#d32f40; }
+
+/* BOTON VOLVER */
+.btn-volver {
+    display:inline-block;
+    padding:10px 18px;
+    background:#457B9D;
+    color:white;
+    border-radius:6px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.btn-volver:hover {
+    background:#3b6d88;
+}
 
 /* FOOTER */
 footer{
@@ -154,7 +169,7 @@ footer{
 <div class="service-box">
     <h3>🌐 ¿De qué se trata?</h3>
     <p>
-        Analizamos tu sitio web para mejorar comunicación, conversiones,
+        Analizamos tu sitio web para mejorar comunicación, conversión,
         posicionamiento en Google e incluso visibilidad en asistentes con IA.
     </p>
     <ul>
@@ -165,7 +180,7 @@ footer{
 </div>
 
 <div class="service-box">
-    <h3>💡 ¿Por qué conviene a pequeñas y medianas empresas?</h3>
+    <h3>💡 ¿Por qué conviene a PYMES?</h3>
     <ul>
         <li>No aparecen en Google</li>
         <li>No convierten visitas en clientes</li>
@@ -180,12 +195,12 @@ footer{
         <li>Más clientes sin publicidad</li>
         <li>Mejor visibilidad en buscadores</li>
         <li>Texto claro y persuasivo</li>
-        <li>Usuario entiende rápido tu servicio</li>
+        <li>Mayor confianza</li>
         <li>Plan de mejora completo</li>
     </ul>
 </div>
 
-<!-- FORMULARIO COMPLETO -->
+<!-- FORMULARIO -->
 <div class="service-box">
 
     <h3>📩 Solicitar Auditoría</h3>
@@ -206,8 +221,9 @@ footer{
         <button class="btn" type="submit">Enviar solicitud</button>
     </form>
 
-    <p style="margin-top:15px;">
-        <a href="index.html#contacto">Ir al contacto</a>
+    <!-- BOTON VOLVER -->
+    <p>
+        <a class="btn-volver" href="index.html">Volver al inicio</a>
     </p>
 
 </div>
