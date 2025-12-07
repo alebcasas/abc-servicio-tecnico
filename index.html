@@ -7,7 +7,7 @@
 
 <style>
 
-/* ---------- BASE ---------- */
+/* BASE */
 
 body{
     margin:0;
@@ -19,7 +19,7 @@ body{
 
 a{ text-decoration:none; color:inherit; }
 
-/* ---------- HEADER ---------- */
+/* HEADER */
 
 header{
     background:#1D3557;
@@ -39,7 +39,7 @@ header{
 
 .logo svg{ width:30px; height:30px; fill:#E63946; }
 
-/* ---------- NAV ---------- */
+/* NAV */
 
 nav{
     background:#457B9D;
@@ -50,12 +50,9 @@ nav{
     gap:15px;
 }
 
-nav a{
-    color:white;
-    font-weight:bold;
-}
+nav a{ color:white; font-weight:bold; }
 
-/* ---------- CONTAINERS ---------- */
+/* CONTENT */
 
 .container{
     max-width:950px;
@@ -63,12 +60,7 @@ nav a{
     padding:0 15px;
 }
 
-h2{
-    text-align:center;
-    color:#1D3557;
-}
-
-/* ---------- CARDS ---------- */
+h2{ text-align:center; color:#1D3557; }
 
 .service-box{
     background:white;
@@ -78,9 +70,9 @@ h2{
     box-shadow:0 2px 4px rgba(0,0,0,.1);
 }
 
-.service-box h3{ color:#1D3557; }
+.service-box h3{ color:#1D3557; font-weight:bold; }
 
-/* ---------- BOTONES ---------- */
+/* BOTONES */
 
 .btn{
     display:inline-block;
@@ -91,210 +83,4 @@ h2{
     font-weight:bold;
 }
 
-.btn:hover{ background:#d62f3d; }
-
-/* ---------- WHATSAPP ---------- */
-
-.btn-wa{
-    background:#25D366;
-}
-
-.btn-wa:hover{ background:#1ebe5d; }
-
-/* ---------- FORM ---------- */
-
-form{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-input, textarea{
-    padding:10px;
-    border-radius:5px;
-    border:1px solid #ccc;
-}
-
-textarea{ min-height:120px; }
-
-/* ---------- RESPONSIVE ---------- */
-
-@media(max-width:600px){
-    .logo{ font-size:1.3em; flex-direction:column; }
-    .btn{ width:100%; text-align:center; }
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- ================= HEADER ================= -->
-
-<header>
-    <div class="logo">
-
-        <!-- Ícono minimalista -->
-        <svg viewBox="0 0 24 24">
-            <path d="M22.7,17.3l-6-6c0.5-1,0.8-2.2,0.8-3.4c0-4.4-3.6-8-8-8S1.5,3.9,1.5,8.3s3.6,8,8,8c1.2,0,2.4-0.3,3.4-0.8l6,6c0.4,0.4,1,0.4,1.4,0S23.1,17.7,22.7,17.3z"/>
-        </svg>
-
-        ABC Servicio Técnico
-    </div>
-    <p>Reparación · Mantenimiento · Redes · Auditoría Web</p>
-</header>
-
-<!-- ================= NAV ================= -->
-
-<nav>
-    <a href="#servicios">Servicios</a>
-    <a href="#auditoria">Auditoría Exprés</a>
-    <a href="#contacto">Contacto</a>
-</nav>
-
-<!-- ================= SERVICIOS ================= -->
-
-<div class="container" id="servicios">
-
-<h2>Servicios</h2>
-
-<div class="service-box">
-    <h3>🛠 Reparación de PC y Notebooks</h3>
-    <p>Diagnóstico, reparación y mantenimiento profesional.</p>
-</div>
-
-<div class="service-box">
-    <h3>💿 Formateo / Windows / Linux / MacOS</h3>
-    <p>Instalamos y optimizamos cualquier sistema operativo.</p>
-</div>
-
-<div class="service-box">
-    <h3🧹>🧹 Eliminación de virus y malware</h3>
-    <p>Protegemos tu equipo de amenazas reales.</p>
-</div>
-
-<div class="service-box">
-    <h3>📦 Recuperación de datos</h3>
-    <p>Recuperamos archivos borrados accidentalmente o discos dañados.</p>
-</div>
-
-<div class="service-box">
-    <h3>🎥 Cámaras de seguridad</h3>
-    <p>Instalación profesional y configuración completa.</p>
-</div>
-
-</div>
-
-
-<!-- ================= AUDITORÍA ================= -->
-
-<div class="container" id="auditoria">
-
-<h2>Auditoría Exprés Web</h2>
-
-<div class="service-box">
-    <h3>🌐 ¿Qué es la Auditoría Exprés Web?</h3>
-    <p>
-        Es un análisis profesional destinado a mejorar la web de tu negocio,
-        aumentar clientes y posicionarte mejor en Google e IA.
-    </p>
-
-    <ul>
-        <li>✅ Copy y conversión</li>
-        <li>✅ SEO y keywords</li>
-        <li>✅ UX y estructura</li>
-    </ul>
-
-    <p>
-        Con años de experiencia, te damos mejoras reales que sí funcionan.
-    </p>
-</div>
-
-<div class="service-box">
-    <h3>💡 ¿Por qué es ideal para PYMES?</h3>
-    <ul>
-        <li>No apareces en Google</li>
-        <li>La gente no entiende qué ofreces</li>
-        <li>No conviertes visitas en clientes</li>
-        <li>No sabes qué mejorar ni por dónde empezar</li>
-    </ul>
-</div>
-
-<div class="service-box">
-    <h3>🚀 Beneficios</h3>
-
-    <p><strong>1) Más clientes sin publicidad</strong></p>
-    <p>Mejoramos textos y persuasión.</p>
-
-    <p><strong>2) Mejor posicionamiento en Google</strong></p>
-    <p>Optimización completa de SEO.</p>
-
-    <p><strong>3) Mejor experiencia para el cliente</strong></p>
-
-    <p><strong>4) Mejora en visibilidad IA</strong></p>
-
-    <p><strong>5) Plan de mejora claro</strong></p>
-</div>
-
-<div class="service-box">
-    <h3>⭐ ¿Por qué elegir esta auditoría?</h3>
-    <ul>
-        <li>Práctica</li>
-        <li>Profesional</li>
-        <li>Orientada a resultados</li>
-        <li>Accesible</li>
-        <li>Rápida</li>
-    </ul>
-
-    <a class="btn" href="#contacto">Solicitar Auditoría Ahora</a>
-</div>
-
-</div>
-
-
-<!-- ================= CONTACTO ================= -->
-
-<div class="container" id="contacto">
-
-<h2>Contacto</h2>
-
-<div class="service-box">
-
-<p>📱 WhatsApp / Teléfono: +54 9 351 313 9353</p>
-<p>📧 Email: abcserviciotecnico@yahoo.com</p>
-
-<a class="btn btn-wa" href="https://wa.me/543513139353">Escribirme por WhatsApp</a>
-
-</div>
-
-<!-- FORMULARIO REAL -->
-
-<div class="service-box">
-
-<h3>📩 Envíame un mensaje</h3>
-
-<form action="https://formsubmit.co/abcserviciotecnico@yahoo.com" method="POST">
-
-<input type="text" name="nombre" placeholder="Tu nombre" required>
-<input type="email" name="email" placeholder="Tu email" required>
-<textarea name="mensaje" placeholder="Escribe tu consulta..." required></textarea>
-
-<input type="hidden" name="_subject" value="Nuevo mensaje desde la web">
-
-<button class="btn" type="submit">Enviar mensaje</button>
-
-</form>
-
-</div>
-</div>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-<p>© 2025 ABC Servicio Técnico de PC y Redes.</p>
-</footer>
-
-
-</body>
-</html>
+.btn:hover{ background:#d62f
