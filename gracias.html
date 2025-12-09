@@ -1,1 +1,111 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solicitud enviada – ABC Servicio Técnico</title>
+
+<style>
+/* BASE */
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#F1FAEE;
+    color:#333;
+    text-align:center;
+}
+
+/* HEADER */
+header{
+    background:#1D3557;
+    color:white;
+    padding:20px;
+}
+
+header .logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    font-size:1.7em;
+    font-weight:bold;
+}
+
+header .logo svg{
+    width:30px;
+    height:30px;
+    fill:#E63946;
+}
+
+/* CONTENT */
+.container{
+    max-width:900px;
+    margin:30px auto;
+    background:white;
+    padding:20px;
+    border-radius:6px;
+    box-shadow:0 2px 4px rgba(0,0,0,.1);
+}
+
+h2{
+    color:#1D3557;
+}
+
+/* BOTON VOLVER */
+.btn-volver {
+    display:inline-block;
+    padding:12px 20px;
+    background:#457B9D;
+    color:white;
+    border-radius:6px;
+    font-weight:bold;
+    margin-top:20px;
+}
+
+.btn-volver:hover{
+    background:#3b6d88;
+}
+
+/* FOOTER */
+footer{
+    background:#1D3557;
+    color:white;
+    padding:15px;
+    margin-top:30px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <svg viewBox="0 0 24 24">
+            <path d="M22.7,17.3l-6-6c0.5-1,0.8-2.2,0.8-3.4c0-4.4-3.6-8-8-8S1.5,3.9,1.5,8.3s3.6,8,8,8c1.2,0,2.4-0.3,3.4-0.8l6,6c0.4,0.4,1,0.4,1.4,0S23.1,17.7,22.7,17.3z"/>
+        </svg>
+        ABC Servicio Técnico
+    </div>
+</header>
+
+<div class="container">
+    <h2>¡Solicitud enviada con éxito!</h2>
+    <p>Gracias por completar la Auditoría Exprés Web.</p>
+    <p>En el transcurso de <strong>24 horas hábiles</strong> recibirás una respuesta en tu correo electrónico.</p>
+
+    <a class="btn-volver" href="index.html">Volver al inicio</a>
+</div>
+
+<footer>
+<p>© 2025 ABC Servicio Técnico de PC y Redes.</p>
+</footer>
+
+<!-- POPUP -->
+<script>
+window.onload = function() {
+    alert("✔️ Tu solicitud fue enviada con éxito.\nEn 24 horas hábiles recibirás una respuesta por email.");
+};
+</script>
+
+</body>
+</html>
