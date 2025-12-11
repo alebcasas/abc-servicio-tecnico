@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Servicio Técnico de PC en Córdoba | ABC Servicio Técnico</title>
+
+<meta name="description" content="Servicio técnico de computadoras en Córdoba. Reparación de PC y notebooks, formateo, eliminación de virus, redes, cámaras de seguridad y soporte remoto. Atención a domicilio y para PYMES.">
+<meta name="keywords" content="servicio técnico, reparación de PC, notebooks, computadoras, redes, cámaras de seguridad, soporte remoto, Córdoba, servicio técnico Córdoba">
+
+<!-- Datos estructurados básicos para SEO local -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ABC Servicio Técnico",
+  "url": "https://alebcasas.github.io/abc-servicio-tecnico/",
+  "telephone": "+54 9 351 313 9253",
+  "email": "abcserviciotecnico@yahoo.com",
+  "description": "Servicio técnico de computadoras en Córdoba. Reparación de PC y notebooks, soporte remoto, redes y cámaras de seguridad.",
+  "areaServed": "Córdoba, Argentina",
+  "serviceType": [
+    "Reparación de PC",
+    "Reparación de notebooks",
+    "Soporte técnico remoto",
+    "Instalación de redes",
+    "Instalación de cámaras de seguridad",
+    "Auditoría exprés web"
+  ]
+}
+</script>
+
+<style>
+/* Reset y estilos base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #F1FAEE;
+  color: #333333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER */
+header {
+  background: #1D3557;
+  color: white;
+  padding: 20px 15px 30px;
+  text-align: center;
+}
+
+header .logo {
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #E63946;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.logo-text {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+header h1 {
+  margin: 10px 0 5px;
+  font-size: 1.6em;
+}
+
+header p.subtitulo {
+  margin: 5px 0 15px;
+  font-size: 1em;
+}
+
+/* HERO CTA */
+.hero-cta {
+  margin-top: 10px;
+}
+.btn-cta {
+  display: inline-block;
+  margin: 5px 8px;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.btn-cta-principal {
+  background: #E63946;
+  color: white;
+}
+.btn-cta-principal:hover {
+  background: #d32f40;
+}
+.btn-cta-secundario {
+  background: #457B9D;
+  color: white;
+}
+.btn-cta-secundario:hover {
+  background: #3b6d88;
+}
+
+/* NAV */
+nav {
+  background: #457B9D;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+/* CONTENT */
+.container {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+h2 {
+  text-align: center;
+  color: #1D3557;
+  margin-top: 10px;
+}
+
+.service-box {
+  background: white;
+  margin: 15px 0;
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.service-box h3 {
+  margin-top: 0;
+  color: #1D3557;
+  font-weight: bold;
+}
+
+/* Bloques destacados */
+.badge {
+  display: inline-block;
+  background: #E63946;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 0.75em;
+  margin-bottom: 8px;
+}
+
+/* CONTACTO */
+.contact {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+}
+
+/* BOTON VOLVER */
+.btn-volver {
+  display:inline-block;
+  padding:10px 18px;
+  background:#457B9D;
+  color:white;
+  border-radius:5px;
+  font-weight:bold;
+  margin-top:15px;
+}
+.btn-volver:hover {
+  background:#3b6d88;
+}
+
+/* FOOTER */
+footer {
+  background: #1D3557;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+  font-size: 0.9em;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  header .logo {
+    flex-direction: column;
+    font-size: 1.5em;
+  }
+}
+</style>
+</head>
+
+<body id="top">
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <div class="logo-icon">ABC</div>
+    <span class="logo-text">Servicio Técnico</span>
+  </div>
+
+  <h1>Servicio técnico de PC y redes en Córdoba</h1>
+  <p class="subtitulo">
+    Reparación · Mantenimiento · Redes · Cámaras · Auditoría Web  
+    <br>Atención a domicilio, para hogares y PYMES.
+  </p>
+
+  <div class="hero-cta">
+    <a class="btn-cta btn-cta-principal" href="#contacto">Quiero reparar mi equipo</a>
+    <a class="btn-cta btn-cta-secundario" href="auditoria.html">Quiero auditar mi web</a>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a href="#servicios">Servicios</a>
+  <a href="#por-que">Por qué elegirnos</a>
+  <a href="auditoria.html">Auditoría Web</a>
+  <a href="#faq">Preguntas frecuentes</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<!-- SERVICIOS -->
+<div class="container" id="servicios">
+
+<h2>Servicios técnicos en Córdoba</h2>
+
+<div class="service-box">
+  <span class="badge">Más solicitado</span>
+  <h3>🛠️ Reparación de PC y Notebooks</h3>
+  <p>
+    Diagnóstico claro, reparación de hardware, reemplazo de piezas y upgrades para que tu equipo
+    vuelva a funcionar como nuevo. Ideal para equipos lentos, que no encienden o se reinician solos.
+  </p>
+</div>
+
+<div class="service-box">
+  <h3>📀 Formateo y Optimización del Sistema</h3>
+  <p>
+    Instalación limpia de Windows, Linux o macOS, eliminación de archivos innecesarios
+    y optimización para que tu PC arranque rápido y funcione fluido.
+  </p>
+</div>
+
+<div class="service-box">
+  <h3>🦠 Eliminación de Virus y Malware</h3>
+  <p>
+    Limpieza completa de virus, malware y spyware. Configuramos protección para que navegues
+    y trabajes con mayor seguridad.
+  </p>
+</div>
+
+<div class="service-box">
+  <h3>💾 Recuperación de Datos</h3>
+  <p>
+    Intentamos recuperar archivos borrados o inaccesibles de discos HDD, SSD y pendrives.
+    Ideal si borraste documentos importantes o tu disco dejó de responder.
+  </p>
+</div>
+
+<div class="service-box">
+  <h3>📥 Instalación de Programas y Drivers</h3>
+  <p>
+    Instalamos y dejamos listos Office, antivirus, impresoras, controladores y software general
+    para que puedas trabajar sin complicaciones.
+  </p>
+</div>
+
+<div class="service-box">
+  <h3>🛟 Soporte y Asistencia Remota</h3>
+  <p>
+    Resolución de problemas por Internet, sin que tengamos que ir a tu domicilio.
+    Ideal para configuraciones rápidas y soporte a PYMES.
+  </p>
+</div>
+
+<div class="service-box">
+  <h3>📶 Redes e Internet</h3>
+  <p>
+    Configuración de WiFi, routers y redes cableadas. Mejora de cobertura y estabilidad
+    para hogares y oficinas en Córdoba.
+  </p>
+</div>
+
+<div class="service-box">
+  <h3>👁️‍🗨️ Instalación de Cámaras de Seguridad</h3>
+  <p>
+    Instalación y configuración de DVR/NVR, visualización remota desde el celular
+    y ajuste básico para que tengas tu hogar o negocio monitoreado.
+  </p>
+</div>
+
+</div>
+
+<!-- POR QUÉ ELEGIRNOS -->
+<div class="container" id="por-que">
+  <h2>¿Por qué elegir ABC Servicio Técnico?</h2>
+
+  <div class="service-box">
+    <ul>
+      <li>✅ Orientado a clientes de <strong>Córdoba Capital y alrededores</strong>.</li>
+      <li>✅ Atención a domicilio y soporte remoto.</li>
+      <li>✅ Explicaciones claras, sin tecnicismos innecesarios.</li>
+      <li>✅ Enfoque en <strong>seguridad, rendimiento y continuidad de tu trabajo</strong>.</li>
+      <li>✅ También ayudamos a <strong>PYMES</strong> con redes y auditoría básica de sus sistemas y webs.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="container" id="faq">
+  <h2>Preguntas frecuentes</h2>
+
+  <div class="service-box">
+    <h3>⏱️ ¿En cuánto tiempo pueden revisar mi equipo?</h3>
+    <p>
+      Dependiendo del tipo de falla, el diagnóstico inicial suele hacerse dentro de las primeras 24 horas
+      hábiles desde que recibimos el equipo o visitamos tu domicilio.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <h3>🏠 ¿Trabajan a domicilio en Córdoba?</h3>
+    <p>
+      Sí, atendemos a domicilio en Córdoba Capital y zonas cercanas. También ofrecemos soporte remoto
+      para ciertos tipos de problemas.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <h3>💾 ¿Voy a perder mis datos al formatear?</h3>
+    <p>
+      Antes de formatear, revisamos la posibilidad de hacer copia de seguridad.
+      Siempre te explicamos los riesgos y las opciones para que tomes la mejor decisión.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <h3>💳 ¿Qué formas de pago aceptan?</h3>
+    <p>
+      Consultanos por WhatsApp para conocer las opciones de pago disponibles al momento
+      de tu servicio (efectivo, transferencias, etc.).
+    </p>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<div class="container" id="contacto">
+
+<h2>Contacto</h2>
+
+<div class="contact">
+
+<p><strong>📍 Zona:</strong> Córdoba Capital y alrededores</p>
+<p><strong>📞 Teléfono / WhatsApp:</strong> +54 9 351 313 9253</p>
+<p><strong>📩 Email:</strong> abcserviciotecnico@yahoo.com</p>
+<p>Atendemos a domicilio y brindamos soporte remoto para hogares y PYMES.</p>
+
+<a class="btn-whatsapp"
+   href="https://wa.me/543513139253?text=Hola%20ABC%20Servicio%20T%C3%A9cnico,%20necesito%20ayuda%20con%20mi%20PC%20o%20red."
+   target="_blank">Contactar por WhatsApp</a>
+
+<br>
+<a class="btn-volver" href="#top">Volver al inicio</a>
+
+</div>
+</div>
+
+<footer>
+<p>© 2025 ABC Servicio Técnico. Servicio técnico de PC en Córdoba. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
