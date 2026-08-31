@@ -4,6 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%233B82F6'/%3E%3Ctext x='50' y='68' font-size='44' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EABC%3C/text%3E%3C/svg%3E">
+
 <title>Servicio Técnico de PC en Córdoba | ABC Servicio Técnico</title>
 
 <meta name="description" content="Servicio técnico de computadoras en Córdoba. Reparación de PC y notebooks, formateo, eliminación de virus, redes, cámaras de seguridad y soporte remoto. Atención a domicilio y para PYMES.">
@@ -32,200 +37,388 @@
 </script>
 
 <style>
-/* Reset y estilos base */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #F1FAEE;
-  color: #333333;
-  line-height: 1.6;
+/* ============ ABC Servicio Técnico — Rediseño Premium ============ */
+
+:root{
+  --bg:#0B1220;
+  --bg-2:#0C1426;
+  --surface:rgba(255,255,255,.045);
+  --border:rgba(148,180,255,.14);
+  --border-strong:rgba(148,180,255,.30);
+  --text:#E8EEF8;
+  --muted:#93A3B8;
+  --cyan:#22D3EE;
+  --blue:#3B82F6;
+  --violet:#8B5CF6;
+  --grad:linear-gradient(135deg,#22D3EE 0%,#3B82F6 55%,#8B5CF6 100%);
+  --whatsapp:#25D366;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+  overflow-x:hidden;
 }
 
-/* HEADER */
-header {
-  background: #1D3557;
-  color: white;
-  padding: 20px 15px 30px;
-  text-align: center;
+body::before{
+  content:"";
+  position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background:
+    radial-gradient(900px 500px at 85% -10%, rgba(59,130,246,.16), transparent 60%),
+    radial-gradient(700px 420px at -10% 12%, rgba(139,92,246,.12), transparent 60%);
 }
 
-header .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-weight: bold;
-  font-size: 1.6em;
+a{ text-decoration:none; color:inherit; }
+ul{ margin:0; padding:0; list-style:none; }
+
+::selection{ background:rgba(59,130,246,.45); color:#fff; }
+::-webkit-scrollbar{ width:11px; }
+::-webkit-scrollbar-track{ background:var(--bg-2); }
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,var(--blue),var(--violet));
+  border-radius:999px; border:2px solid var(--bg-2);
 }
 
-/* Nuevo logo premium */
-.logo-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #E63946;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  font-size: 0.9em;
-  letter-spacing: 0.12em;
-  line-height: 1;
-  box-shadow: 0 0 0 3px rgba(255,255,255,0.18);
+.container{ max-width:1100px; margin:0 auto; padding:0 22px; }
+.section{ padding:84px 0 20px; }
+
+.grad-text{
+  background:var(--grad);
+  -webkit-background-clip:text; background-clip:text;
+  -webkit-text-fill-color:transparent; color:transparent;
 }
 
-.logo-text {
-  font-size: 0.8em;
-  letter-spacing: 0.06em;
+.eyebrow{
+  display:inline-flex; align-items:center; gap:9px;
+  font-family:'Sora',system-ui,sans-serif;
+  font-size:.72rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--cyan);
+  padding:7px 16px; border-radius:999px;
+  border:1px solid var(--border);
+  background:linear-gradient(135deg,rgba(34,211,238,.09),rgba(139,92,246,.09));
+}
+.eyebrow::before{
+  content:""; width:6px; height:6px; border-radius:50%;
+  background:var(--cyan); box-shadow:0 0 10px var(--cyan);
 }
 
-/* Títulos del header */
-header h1 {
-  margin: 10px 0 5px;
-  font-size: 1.6em;
+h2{
+  font-family:'Sora',system-ui,sans-serif;
+  font-size:clamp(1.6rem,3.4vw,2.35rem);
+  line-height:1.2; margin:18px 0 10px; text-align:center;
 }
 
-header p.subtitulo {
-  margin: 5px 0 15px;
-  font-size: 1em;
+.section-sub{ text-align:center; color:var(--muted); max-width:650px; margin:0 auto 46px; font-size:1rem; }
+
+header{
+  position:relative; text-align:center;
+  padding:105px 20px 88px; overflow:hidden;
+}
+header::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(rgba(148,180,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148,180,255,.05) 1px, transparent 1px);
+  background-size:54px 54px;
+  -webkit-mask-image:radial-gradient(ellipse 95% 75% at 50% 0%, #000 25%, transparent 72%);
+}
+header::after{
+  content:"";
+  position:absolute; inset:auto -10% -1px -10%; height:1px;
+  background:linear-gradient(90deg,transparent,rgba(139,92,246,.6),rgba(34,211,238,.6),transparent);
 }
 
-/* HERO CTA */
-.hero-cta {
-  margin-top: 10px;
+header .logo{
+  position:relative; z-index:1;
+  display:flex; align-items:center; justify-content:center; gap:13px;
+  font-family:'Sora',system-ui,sans-serif;
+  font-weight:800; font-size:1.3rem; letter-spacing:.04em;
 }
-.btn-cta {
-  display: inline-block;
-  margin: 5px 8px;
-  padding: 10px 18px;
-  border-radius: 4px;
-  font-weight: bold;
+.logo-icon{
+  width:54px; height:54px; border-radius:16px;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--grad);
+  font-family:'Sora',system-ui,sans-serif;
+  font-weight:800; font-size:.95rem; letter-spacing:.1em; color:#fff;
+  box-shadow:0 12px 34px -8px rgba(59,130,246,.55), inset 0 1px 0 rgba(255,255,255,.4);
 }
-.btn-cta-principal {
-  background: #E63946;
-  color: white;
-}
-.btn-cta-principal:hover {
-  background: #d32f40;
-}
-.btn-cta-secundario {
-  background: #457B9D;
-  color: white;
-}
-.btn-cta-secundario:hover {
-  background: #3b6d88;
+.logo-text{ font-size:.78em; }
+.logo-text small{
+  display:block; font-size:.62em; font-weight:500;
+  font-family:'Inter',system-ui,sans-serif; color:var(--muted);
 }
 
-/* NAV */
-nav {
-  background: #457B9D;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px;
+.hero-badge{
+  position:relative; z-index:1;
+  display:inline-flex; align-items:center; gap:9px;
+  margin:30px 0 22px;
+  font-size:.8rem; font-weight:600; color:#DCE8FA;
+  padding:9px 18px; border-radius:999px;
+  border:1px solid var(--border-strong);
+  background:rgba(255,255,255,.05);
+  backdrop-filter:blur(8px);
 }
-nav a {
-  color: white;
-  margin: 0 10px;
-  font-weight: bold;
-  font-size: 0.95em;
+.pulse-dot{
+  width:9px; height:9px; border-radius:50%;
+  background:var(--whatsapp);
+  animation:pulse 2.2s infinite;
 }
-
-/* CONTENT */
-.container {
-  max-width: 960px;
-  margin: 20px auto;
-  padding: 0 15px;
-}
-
-h2 {
-  text-align: center;
-  color: #1D3557;
-  margin-top: 10px;
+@keyframes pulse{
+  0%{ box-shadow:0 0 0 0 rgba(37,211,102,.55); }
+  70%{ box-shadow:0 0 0 12px rgba(37,211,102,0); }
+  100%{ box-shadow:0 0 0 0 rgba(37,211,102,0); }
 }
 
-.service-box {
-  background: white;
-  margin: 15px 0;
-  padding: 15px 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+header h1{
+  position:relative; z-index:1;
+  max-width:840px; margin:0 auto;
+  font-family:'Sora',system-ui,sans-serif;
+  font-size:clamp(2.05rem,5.4vw,3.55rem);
+  line-height:1.14; font-weight:800; letter-spacing:-.02em;
+}
+header p.subtitulo{
+  position:relative; z-index:1;
+  max-width:660px; margin:20px auto 0;
+  font-size:1.08rem; color:var(--muted);
 }
 
-.service-box h3 {
-  margin-top: 0;
-  color: #1D3557;
-  font-weight: bold;
+.hero-features{
+  position:relative; z-index:1;
+  display:flex; flex-wrap:wrap; gap:10px 20px; justify-content:center;
+  margin:28px auto 0; font-size:.87rem; color:#B9C7DC;
+}
+.hero-features span{ display:inline-flex; align-items:center; gap:7px; }
+
+.hero-cta{
+  position:relative; z-index:1;
+  margin-top:36px;
+  display:flex; flex-wrap:wrap; gap:14px; justify-content:center;
+}
+.btn-cta{
+  display:inline-flex; align-items:center; gap:9px;
+  padding:15px 28px; border-radius:14px;
+  font-family:'Sora',system-ui,sans-serif;
+  font-weight:700; font-size:.95rem;
+  transition:transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease;
+}
+.btn-cta:hover{ transform:translateY(-3px); }
+.btn-cta-principal{
+  background:var(--grad); color:#04121F;
+  box-shadow:0 18px 40px -12px rgba(59,130,246,.55), inset 0 1px 0 rgba(255,255,255,.4);
+}
+.btn-cta-principal:hover{ box-shadow:0 24px 52px -12px rgba(59,130,246,.72), inset 0 1px 0 rgba(255,255,255,.4); }
+.btn-cta-secundario{
+  background:rgba(255,255,255,.05); color:var(--text);
+  border:1px solid var(--border-strong);
+  backdrop-filter:blur(8px);
+}
+.btn-cta-secundario:hover{
+  border-color:rgba(139,92,246,.55); background:rgba(139,92,246,.12);
 }
 
-/* Bloques destacados */
-.badge {
-  display: inline-block;
-  background: #E63946;
-  color: white;
-  padding: 3px 8px;
-  border-radius: 999px;
-  font-size: 0.75em;
-  margin-bottom: 8px;
+/* Nav */
+nav{
+  position:sticky; top:0; z-index:50;
+  display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:4px 10px;
+  padding:13px 18px;
+  background:rgba(11,18,32,.82);
+  backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow .3s ease;
+}
+nav.scrolled{ box-shadow:0 16px 40px -20px rgba(0,0,0,.85); }
+.nav-brand{
+  font-family:'Sora',system-ui,sans-serif;
+  font-weight:800; letter-spacing:.1em; color:#fff !important;
+}
+nav a{
+  font-weight:600; font-size:.9rem; color:#C6D3E8;
+  padding:9px 15px; border-radius:10px;
+  transition:color .2s ease, background .2s ease;
+}
+nav a:hover{ color:#fff; background:rgba(255,255,255,.08); }
+
+/* ---------- Servicios (cards) ---------- */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
 }
 
-/* CONTACTO */
-.contact {
-  background: white;
-  padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.badge{
+  position:absolute; top:20px; right:20px;
+  font-size:.66rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+  color:#04121F;
+  background:var(--grad);
+  padding:6px 12px; border-radius:999px;
+  box-shadow:0 10px 22px -8px rgba(59,130,246,.55);
+  z-index:2;
+}
+.badge + h3{ padding-right:96px; }
+
+.service-box{
+  position:relative;
+  background:linear-gradient(180deg,var(--surface),rgba(255,255,255,.02));
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:24px 22px 26px;
+  overflow:hidden;
+  transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+.service-box::before{
+  content:"";
+  position:absolute; top:0; left:0; right:0; height:2px;
+  background:var(--grad); opacity:0;
+  transition:opacity .3s ease;
+}
+.service-box:hover{
+  transform:translateY(-5px);
+  border-color:var(--border-strong);
+  box-shadow:0 24px 50px -24px rgba(2,8,23,.95), 0 0 0 1px rgba(59,130,246,.14);
+}
+.service-box:hover::before{ opacity:1; }
+
+.icon-chip{
+  flex-shrink:0;
+  width:52px; height:52px; border-radius:14px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.45rem;
+  background:linear-gradient(140deg,rgba(34,211,238,.16),rgba(139,92,246,.16));
+  border:1px solid var(--border-strong);
 }
 
-.btn-whatsapp {
-  display: inline-block;
-  background: #25D366;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-weight: bold;
-  margin-top: 10px;
+.service-box h3{
+  margin:16px 0 9px;
+  font-family:'Sora',system-ui,sans-serif;
+  font-size:1.08rem;
+  display:flex; align-items:center; gap:12px;
 }
-.btn-whatsapp:hover {
-  background: #1ebe5d;
+.service-box p{ margin:0; color:var(--muted); font-size:.95rem; }
+
+/* ---------- Por qué elegirnos ---------- */
+.why-list li{
+  display:flex; gap:13px; align-items:flex-start;
+  color:#C6D3E8; font-size:.97rem; margin-bottom:15px;
+}
+.why-list li::before{
+  content:"✓";
+  flex:0 0 26px; height:26px; border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(52,211,153,.14); color:var(--whatsapp);
+  font-size:.85rem; font-weight:800;
+  border:1px solid rgba(52,211,153,.35);
+}
+.why-note{
+  margin-top:8px; padding:18px 20px; border-radius:14px;
+  background:linear-gradient(135deg,rgba(59,130,246,.12),rgba(139,92,246,.12));
+  border:1px solid var(--border-strong);
+  font-size:.95rem; color:#DCE8FA;
 }
 
-/* BOTON VOLVER */
-.btn-volver {
-  display:inline-block;
-  padding:10px 18px;
-  background:#457B9D;
-  color:white;
-  border-radius:5px;
-  font-weight:bold;
-  margin-top:15px;
+/* ---------- FAQ ---------- */
+.faq-item{
+  display:block;
+  margin-bottom:14px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:linear-gradient(180deg,var(--surface),rgba(255,255,255,.02));
+  overflow:hidden;
+  transition:border-color .25s ease, box-shadow .25s ease;
 }
-.btn-volver:hover {
-  background:#3b6d88;
+.faq-item[open]{ border-color:var(--border-strong); box-shadow:0 16px 40px -24px rgba(2,8,23,.9); }
+.faq-item summary{
+  cursor:pointer; list-style:none;
+  display:flex; align-items:center; gap:12px;
+  font-family:'Sora',system-ui,sans-serif;
+  font-weight:600; font-size:.97rem; color:var(--text);
+  padding:18px 20px;
 }
+.faq-item summary::-webkit-details-marker{ display:none; }
+.faq-item summary::after{
+  content:"+"; margin-left:auto;
+  font-size:1.35rem; font-weight:500; color:var(--cyan);
+  transition:transform .25s ease;
+}
+.faq-item[open] summary::after{ transform:rotate(45deg); }
+.faq-item p{ margin:0; padding:0 20px 20px; color:var(--muted); font-size:.95rem; }
 
-/* FOOTER */
-footer {
-  background: #1D3557;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 30px;
-  font-size: 0.9em;
+/* ---------- Contacto ---------- */
+.contact{
+  max-width:760px; margin:10px auto 0;
+  padding:2px; border-radius:22px;
+  background:linear-gradient(135deg,rgba(34,211,238,.55),rgba(139,92,246,.55));
+  box-shadow:0 26px 60px -24px rgba(0,0,0,.75);
 }
+.contact-inner{
+  background:var(--bg-2);
+  border-radius:20px;
+  padding:38px 34px;
+}
+.contact-lines p{
+  display:flex; gap:13px; align-items:center;
+  margin:0 0 14px; color:#C6D3E8; font-size:.98rem;
+}
+.contact-lines .ci{
+  flex:0 0 40px; height:40px; border-radius:11px;
+  display:flex; align-items:center; justify-content:center; font-size:1.15rem;
+  background:linear-gradient(140deg,rgba(34,211,238,.14),rgba(139,92,246,.14));
+  border:1px solid var(--border-strong);
+}
+.contact-note{ color:var(--muted); font-size:.92rem; margin:16px 0 24px; }
 
-/* RESPONSIVE */
+.btn-whatsapp{
+  display:inline-flex; align-items:center; gap:10px;
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+  color:#fff; font-weight:700; padding:15px 26px; border-radius:14px;
+  box-shadow:0 18px 38px -12px rgba(34,197,94,.55), inset 0 1px 0 rgba(255,255,255,.3);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.btn-whatsapp:hover{ transform:translateY(-3px); box-shadow:0 22px 46px -12px rgba(34,197,94,.7); }
+
+.btn-volver{
+  display:inline-flex; align-items:center; gap:8px;
+  margin-top:18px; font-weight:600; font-size:.9rem; color:#B9C7DC;
+  padding:11px 18px; border-radius:12px;
+  border:1px solid var(--border-strong);
+  transition:color .2s ease, border-color .2s ease, background .2s ease;
+}
+.btn-volver:hover{ color:#fff; border-color:rgba(139,92,246,.5); background:rgba(139,92,246,.1); }
+
+/* ---------- Footer ---------- */
+footer{
+  margin-top:90px;
+  border-top:1px solid var(--border);
+  background:linear-gradient(180deg,transparent,rgba(59,130,246,.07));
+  text-align:center; padding:38px 20px 44px;
+  font-size:.88rem; color:var(--muted);
+}
+footer p{ margin:6px 0; }
+.fw-mark{ color:#C6D3E8; font-weight:700; font-family:'Sora',system-ui,sans-serif; letter-spacing:.04em; }
+
+/* ---------- Reveal ---------- */
+.reveal{ opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; }
+.reveal.visible{ opacity:1; transform:none; }
+
+/* ---------- Responsive ---------- */
+@media(max-width:700px){
+  header{ padding:84px 18px 68px; }
+  .section{ padding:58px 0 10px; }
+  .services-grid{ grid-template-columns:1fr; }
+  .contact-inner{ padding:28px 22px; }
+  .nav-brand{ display:none; }
+  nav{ gap:2px 4px; padding:10px 8px; }
+  nav a{ font-size:.82rem; padding:8px 10px; }
+}
 @media(max-width:600px){
-  header .logo {
-    flex-direction: column;
-    font-size: 1.5em;
-  }
+  header .logo{ font-size:1.12rem; }
+  .logo-text{ font-size:.72em; }
 }
 </style>
 </head>
@@ -236,14 +429,22 @@ footer {
 <header>
   <div class="logo">
     <div class="logo-icon">ABC</div>
-    <div class="logo-text">Servicio Técnico</div>
+    <div class="logo-text">Servicio Técnico<small>Córdoba · PC · Redes · Web</small></div>
   </div>
 
-  <h1>Servicio técnico de PC y redes en Córdoba</h1>
+  <div class="hero-badge"><span class="pulse-dot"></span> Disponible para asistencia hoy</div>
+
+  <h1>Servicio técnico de PC y redes <span class="grad-text">en Córdoba</span></h1>
   <p class="subtitulo">
-    Reparación · Mantenimiento · Redes · Cámaras · Auditoría Web  
+    Reparación · Mantenimiento · Redes · Cámaras · Auditoría Web
     <br>Atención a domicilio, para hogares y PYMES.
   </p>
+
+  <div class="hero-features">
+    <span>⚙️ Reparación de equipos</span>
+    <span>🛡️ Seguridad y virus</span>
+    <span>📡 Redes y cámaras</span>
+  </div>
 
   <div class="hero-cta">
     <a class="btn-cta btn-cta-principal" href="#contacto">Quiero reparar mi equipo</a>
@@ -253,6 +454,7 @@ footer {
 
 <!-- NAV -->
 <nav>
+  <a class="nav-brand" href="#top">ABC</a>
   <a href="#servicios">Servicios</a>
   <a href="#por-que">Por qué elegirnos</a>
   <a href="auditoria.html">Auditoría Web</a>
@@ -261,13 +463,19 @@ footer {
 </nav>
 
 <!-- SERVICIOS -->
-<div class="container" id="servicios">
+<div class="container section" id="servicios">
 
-<h2>Servicios técnicos en Córdoba</h2>
+<div class="reveal">
+  <span class="eyebrow">Qué hacemos</span>
+  <h2>Servicios técnicos en <span class="grad-text">Córdoba</span></h2>
+  <p class="section-sub">Soluciones claras y rápidas para que tu equipo, tu red o tu web vuelvan a trabajar por vos.</p>
+</div>
+
+<div class="services-grid">
 
 <div class="service-box">
   <span class="badge">Más solicitado</span>
-  <h3>🛠️ Reparación de PC y Notebooks</h3>
+  <h3><span class="icon-chip">🛠️</span>Reparación de PC y Notebooks</h3>
   <p>
     Diagnóstico claro, reparación de hardware, reemplazo de piezas y upgrades para que tu equipo
     vuelva a funcionar como nuevo. Ideal para equipos lentos, que no encienden o se reinician solos.
@@ -275,7 +483,7 @@ footer {
 </div>
 
 <div class="service-box">
-  <h3>📀 Formateo y Optimización del Sistema</h3>
+  <h3><span class="icon-chip">📀</span>Formateo y Optimización del Sistema</h3>
   <p>
     Instalación limpia de Windows, Linux o macOS, eliminación de archivos innecesarios
     y optimización para que tu PC arranque rápido y funcione fluido.
@@ -283,7 +491,7 @@ footer {
 </div>
 
 <div class="service-box">
-  <h3>🦠 Eliminación de Virus y Malware</h3>
+  <h3><span class="icon-chip">🦠</span>Eliminación de Virus y Malware</h3>
   <p>
     Limpieza completa de virus, malware y spyware. Configuramos protección para que navegues
     y trabajes con mayor seguridad.
@@ -291,7 +499,7 @@ footer {
 </div>
 
 <div class="service-box">
-  <h3>💾 Recuperación de Datos</h3>
+  <h3><span class="icon-chip">💾</span>Recuperación de Datos</h3>
   <p>
     Intentamos recuperar archivos borrados o inaccesibles de discos HDD, SSD y pendrives.
     Ideal si borraste documentos importantes o tu disco dejó de responder.
@@ -299,7 +507,7 @@ footer {
 </div>
 
 <div class="service-box">
-  <h3>📥 Instalación de Programas y Drivers</h3>
+  <h3><span class="icon-chip">📥</span>Instalación de Programas y Drivers</h3>
   <p>
     Instalamos y dejamos listos Office, antivirus, impresoras, controladores y software general
     para que puedas trabajar sin complicaciones.
@@ -307,7 +515,7 @@ footer {
 </div>
 
 <div class="service-box">
-  <h3>🛟 Soporte y Asistencia Remota</h3>
+  <h3><span class="icon-chip">🛟</span>Soporte y Asistencia Remota</h3>
   <p>
     Resolución de problemas por Internet, sin que tengamos que ir a tu domicilio.
     Ideal para configuraciones rápidas y soporte a PYMES.
@@ -315,7 +523,7 @@ footer {
 </div>
 
 <div class="service-box">
-  <h3>📶 Redes e Internet</h3>
+  <h3><span class="icon-chip">📶</span>Redes e Internet</h3>
   <p>
     Configuración de WiFi, routers y redes cableadas. Mejora de cobertura y estabilidad
     para hogares y oficinas en Córdoba.
@@ -323,95 +531,129 @@ footer {
 </div>
 
 <div class="service-box">
-  <h3>👁️‍🗨️ Instalación de Cámaras de Seguridad</h3>
+  <h3><span class="icon-chip">👁️‍🗨️</span>Instalación de Cámaras de Seguridad</h3>
   <p>
     Instalación y configuración de DVR/NVR, visualización remota desde el celular
     y ajuste básico para que tengas tu hogar o negocio monitoreado.
   </p>
 </div>
 
+</div><!-- fin services-grid -->
+
 </div>
 
 <!-- POR QUÉ ELEGIRNOS -->
-<div class="container" id="por-que">
-  <h2>¿Por qué elegir ABC Servicio Técnico?</h2>
+<div class="container section" id="por-que">
+  <div class="reveal">
+    <span class="eyebrow">Nuestra diferencia</span>
+    <h2>¿Por qué elegir a <span class="grad-text">ABC Servicio Técnico</span>?</h2>
+    <p class="section-sub">Cuidamos tu tiempo y tu equipo como si fuera nuestro.</p>
+  </div>
 
-  <div class="service-box">
-    <ul>
-      <li>✅ Orientado a clientes de <strong>Córdoba Capital y alrededores</strong>.</li>
-      <li>✅ Atención a domicilio y soporte remoto.</li>
-      <li>✅ Explicaciones claras, sin tecnicismos innecesarios.</li>
-      <li>✅ Enfoque en <strong>seguridad, rendimiento y continuidad de tu trabajo</strong>.</li>
-      <li>✅ También ayudamos a <strong>PYMES</strong> con redes y auditoría básica de sus sistemas y webs.</li>
+  <div class="service-box reveal">
+    <ul class="why-list">
+      <li>Orientado a clientes de <strong>Córdoba Capital y alrededores</strong>.</li>
+      <li>Atención a domicilio y soporte remoto.</li>
+      <li>Explicaciones claras, sin tecnicismos innecesarios.</li>
+      <li>Enfoque en <strong>seguridad, rendimiento y continuidad de tu trabajo</strong>.</li>
+      <li>También ayudamos a <strong>PYMES</strong> con redes y auditoría básica de sus sistemas y webs.</li>
     </ul>
-      <p>
-     💪 Nos esforzamos al máximo porque sabemos lo importante que es volver a tener tu PC funcionando cuando más la necesitás.
-  </p>
+    <p class="why-note">
+      💪 Nos esforzamos al máximo porque sabemos lo importante que es volver a tener tu PC funcionando cuando más la necesitás.
+    </p>
   </div>
 </div>
 
 <!-- FAQ -->
-<div class="container" id="faq">
-  <h2>Preguntas frecuentes</h2>
+<div class="container section" id="faq">
+  <div class="reveal">
+    <span class="eyebrow">Dudas comunes</span>
+    <h2>Preguntas frecuentes</h2>
+    <p class="section-sub">Las respuestas que necesitás antes de contactarnos.</p>
+  </div>
 
-  <div class="service-box">
-    <h3>⏱️ ¿En cuánto tiempo pueden revisar mi equipo?</h3>
+  <details class="faq-item reveal">
+    <summary>⏱️ ¿En cuánto tiempo pueden revisar mi equipo?</summary>
     <p>
       Dependiendo del tipo de falla, el diagnóstico inicial suele hacerse dentro de las primeras 24 horas
       hábiles desde que recibimos el equipo o visitamos tu domicilio.
     </p>
-  </div>
+  </details>
 
-  <div class="service-box">
-    <h3>🏠 ¿Trabajan a domicilio en Córdoba?</h3>
+  <details class="faq-item reveal">
+    <summary>🏠 ¿Trabajan a domicilio en Córdoba?</summary>
     <p>
       Sí, atendemos a domicilio en Córdoba Capital y zonas cercanas. También ofrecemos soporte remoto
       para ciertos tipos de problemas.
     </p>
-  </div>
+  </details>
 
-  <div class="service-box">
-    <h3>💾 ¿Voy a perder mis datos al formatear?</h3>
+  <details class="faq-item reveal">
+    <summary>💾 ¿Voy a perder mis datos al formatear?</summary>
     <p>
       Antes de formatear, revisamos la posibilidad de hacer copia de seguridad.
       Siempre te explicamos los riesgos y las opciones para que tomes la mejor decisión.
     </p>
-  </div>
+  </details>
 
-  <div class="service-box">
-    <h3>💳 ¿Qué formas de pago aceptan?</h3>
+  <details class="faq-item reveal">
+    <summary>💳 ¿Qué formas de pago aceptan?</summary>
     <p>
       Consultanos por WhatsApp para conocer las opciones de pago disponibles al momento
       de tu servicio (efectivo, transferencias, etc.).
     </p>
-  </div>
+  </details>
 </div>
 
 <!-- CONTACTO -->
-<div class="container" id="contacto">
+<div class="container section" id="contacto">
+  <div class="reveal">
+    <span class="eyebrow">Contacto</span>
+    <h2>Hablemos de <span class="grad-text">tu equipo</span></h2>
+    <p class="section-sub">Respondemos rápido por WhatsApp o email.</p>
+  </div>
 
-<h2>Contacto</h2>
+  <div class="contact reveal">
+    <div class="contact-inner">
+      <div class="contact-lines">
+        <p><span class="ci">📍</span> Córdoba Capital y alrededores</p>
+        <p><span class="ci">📞</span> Teléfono / WhatsApp: <strong>+54 9 351 313 9253</strong></p>
+        <p><span class="ci">📩</span> Email: <strong>abcserviciotecnico@yahoo.com</strong></p>
+      </div>
 
-<div class="contact">
+      <p class="contact-note">Atendemos a domicilio y brindamos soporte remoto para hogares y PYMES.</p>
 
-<p><strong>📍 Zona:</strong> Córdoba Capital y alrededores</p>
-<p><strong>📞 Teléfono / WhatsApp:</strong> +54 9 351 313 9253</p>
-<p><strong>📩 Email:</strong> abcserviciotecnico@yahoo.com</p>
-<p>Atendemos a domicilio y brindamos soporte remoto para hogares y PYMES.</p>
+      <a class="btn-whatsapp"
+         href="https://wa.me/543513139253?text=Hola%20ABC%20Servicio%20T%C3%A9cnico,%20necesito%20ayuda%20con%20mi%20PC%20o%20red."
+         target="_blank">💬 Contactar por WhatsApp</a>
 
-<a class="btn-whatsapp"
-   href="https://wa.me/543513139253?text=Hola%20ABC%20Servicio%20T%C3%A9cnico,%20necesito%20ayuda%20con%20mi%20PC%20o%20red."
-   target="_blank">Contactar por WhatsApp</a>
-
-<br>
-<a class="btn-volver" href="#top">Volver al inicio</a>
-
-</div>
+      <br>
+      <a class="btn-volver" href="#top">↑ Volver al inicio</a>
+    </div>
+  </div>
 </div>
 
 <footer>
-<p>© 2025 ABC Servicio Técnico. Servicio técnico de PC en Córdoba. Todos los derechos reservados.</p>
+  <p class="fw-mark">ABC Servicio Técnico</p>
+  <p>© 2025 · Servicio técnico de PC en Córdoba. Todos los derechos reservados.</p>
+  <p>Reparación · Redes · Cámaras · Auditoría Web</p>
 </footer>
 
+<script>
+  // Animación de aparición al hacer scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Sombra del nav al hacer scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 12);
+  }, { passive: true });
+</script>
 </body>
 </html>
