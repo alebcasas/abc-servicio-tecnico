@@ -386,8 +386,13 @@ footer p{ margin:6px 0; }
         <!-- REDIRECCIÓN A PÁGINA DE ÉXITO -->
         <input type="hidden" name="_next" value="https://alebcasas.github.io/abc-servicio-tecnico/gracias.html">
 
-        <!-- Evitar captcha / honeypot opcional -->
-        <input type="hidden" name="_captcha" value="false">
+        <!-- URL de la página del formulario (útil cuando el navegador oculta el referrer) -->
+        <input type="hidden" name="_url" value="https://alebcasas.github.io/abc-servicio-tecnico/auditoria.html">
+
+        <!-- Plantilla de email legible en tabla -->
+        <input type="hidden" name="_template" value="table">
+
+        <!-- reCAPTCHA activo por defecto (recomendado por FormSubmit para evitar bloqueos) -->
 
         <button class="btn" type="submit">Enviar solicitud</button>
     </form>
